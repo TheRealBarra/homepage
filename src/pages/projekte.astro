@@ -1,44 +1,45 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Icon from '../components/Icon.astro';
 
 const features = [
   {
-    icon: '📋',
+    icon: 'file-text',
     title: 'Vertragsverwaltung',
     desc: 'Verträge mit Dokumenten-Upload, Zahlungszyklen, Laufzeiten und automatischen Ablauferinnerungen.',
   },
   {
-    icon: '🏠',
+    icon: 'home',
     title: 'Immobilienverwaltung',
     desc: 'Objekte mit zugehörigen Dokumenten, Mietverträgen, Notizen und Kostenübersicht.',
   },
   {
-    icon: '🚗',
+    icon: 'car',
     title: 'Fahrzeugverwaltung',
     desc: 'Fahrzeuge mit TÜV-Tracking, Serviceverlauf, Versicherungen und Kostenverfolgung.',
   },
   {
-    icon: '📦',
+    icon: 'box',
     title: 'Inventarverwaltung',
     desc: 'Gegenstände mit Seriennummern, Garantiefristen und hinterlegten Kaufbelegen.',
   },
   {
-    icon: '📅',
+    icon: 'calendar',
     title: 'Kalender & Fristen',
     desc: 'Zentraler Überblick über Zahlungen, Vertragsenden, TÜV-Termine und Geburtstage.',
   },
   {
-    icon: '📊',
+    icon: 'chart-bar',
     title: 'Analytics & Budgets',
     desc: 'Kostenübersicht, monatliche Verbindlichkeiten und Ausgabenstatistiken auf einen Blick.',
   },
   {
-    icon: '📇',
+    icon: 'address-book',
     title: 'Adressbuch',
     desc: 'Kontakte zu Vermietern, Versicherungen, Werkstätten und Dienstleistern – alles verknüpft.',
   },
   {
-    icon: '💾',
+    icon: 'database-export',
     title: 'Backup & Restore',
     desc: 'Automatisches Backup der SQLite-Datenbank inkl. Uploads, vollständig wiederherstellbar.',
   },
@@ -86,7 +87,7 @@ const stack = [
             an einem Ort zu verwalten.
           </p>
           <div class="project-origin">
-            <div class="origin-icon" aria-hidden="true">💡</div>
+            <div class="origin-icon"><Icon name="bulb" size={22} /></div>
             <div>
               <strong>Warum ich es gebaut habe:</strong> Verträge lagen in E-Mails,
               PDFs auf verschiedenen Geräten, Fristen in Notizen. Kein Tool am Markt
@@ -102,7 +103,7 @@ const stack = [
       <div class="features-grid">
         {features.map(f => (
           <div class="card feature-card">
-            <span class="feature-icon" aria-hidden="true">{f.icon}</span>
+            <span class="feature-icon"><Icon name={f.icon} size={26} /></span>
             <h3 class="feature-title">{f.title}</h3>
             <p class="feature-desc">{f.desc}</p>
           </div>
@@ -214,7 +215,7 @@ const stack = [
     line-height: 1.7;
   }
 
-  .origin-icon { font-size: 1.25rem; flex-shrink: 0; margin-top: 0.1rem; }
+  .origin-icon { width: 1.375rem; height: 1.375rem; flex-shrink: 0; margin-top: 0.1rem; color: var(--accent); display: flex; align-items: center; }
 
   .project-origin strong { color: var(--text); }
 
@@ -233,7 +234,7 @@ const stack = [
     padding: 1.5rem;
   }
 
-  .feature-icon { font-size: 1.625rem; }
+  .feature-icon { width: 1.75rem; height: 1.75rem; display: flex; align-items: center; color: var(--accent); }
 
   .feature-title {
     font-size: 1rem;

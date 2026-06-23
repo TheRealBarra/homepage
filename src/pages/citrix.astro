@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Icon from '../components/Icon.astro';
 import { getCollection } from 'astro:content';
 
 const citrixPosts = (await getCollection('blog'))
@@ -8,42 +9,42 @@ const citrixPosts = (await getCollection('blog'))
 
 const stack = [
   {
-    icon: '🖥️',
+    icon: 'device-desktop',
     title: 'Virtual Apps & Desktops',
     desc: 'Design, Sizing und Betrieb von CVAD-Umgebungen – On-Premise, Hybrid und als DaaS. Von der Pilotinstallation bis zur Enterprise-Skalierung.',
   },
   {
-    icon: '☁️',
+    icon: 'cloud',
     title: 'Citrix DaaS',
     desc: 'Cloud-Delivery von Desktops und Applikationen mit Citrix DaaS. Migration von On-Premise CVAD in die Cloud – inkl. Identitäts- und Policy-Konzepten.',
   },
   {
-    icon: '⚖️',
+    icon: 'network',
     title: 'NetScaler / ADC',
     desc: 'Load Balancing, SSL Offloading, Gateway-Konfiguration und High Availability. Citrix ADC als zentraler Eintrittspunkt für sichere App-Delivery.',
   },
   {
-    icon: '🛡️',
+    icon: 'shield-check',
     title: 'Web Application Firewall',
     desc: 'Absicherung von Web-Applikationen mit der NetScaler WAF. Schutz gegen OWASP Top 10, Bot-Traffic-Kontrolle und SSL Inspection.',
   },
   {
-    icon: '💿',
+    icon: 'database',
     title: 'Provisioning Services',
     desc: 'Streaming-basierte VDA-Bereitstellung mit PVS. Write-Cache-Strategien, vDisk-Management und Target Device Lifecycle in großen Umgebungen.',
   },
   {
-    icon: '⚙️',
+    icon: 'settings',
     title: 'Workspace Environment Management',
     desc: 'WEM als Ersatz für GPO-basierte Logon-Optimierung. CPU/RAM-Verwaltung, Application Security und schnelle Logon-Zeiten in multi-user Szenarien.',
   },
   {
-    icon: '🔵',
+    icon: 'layers-intersect',
     title: 'Citrix Hypervisor',
     desc: 'Bare-Metal-Virtualisierung mit Citrix Hypervisor (XenServer). Management über XenCenter und Integration in Citrix CVAD Machine Catalogs.',
   },
   {
-    icon: '💡',
+    icon: 'terminal',
     title: 'UniconOS (ehem. eLux)',
     desc: 'Lightweight Linux-Endpoint-OS für Citrix-Umgebungen. Hardware repurposing, Boot-to-DaaS und zentrale Verwaltung mit UniconOS Management.',
   },
@@ -107,7 +108,7 @@ const highlights = [
       <div class="stack-grid">
         {stack.map(item => (
           <div class="card stack-card">
-            <div class="stack-icon" aria-hidden="true">{item.icon}</div>
+            <div class="stack-icon"><Icon name={item.icon} size={26} /></div>
             <h3 class="stack-title">{item.title}</h3>
             <p class="stack-desc">{item.desc}</p>
           </div>
@@ -139,17 +140,17 @@ const highlights = [
         </div>
         <div class="philosophy-stats">
           <div class="philo-card card">
-            <span class="philo-icon" aria-hidden="true">🎯</span>
+            <span class="philo-icon"><Icon name="target" size={22} /></span>
             <h3>Sizing first</h3>
             <p>Schlechtes Sizing ist die häufigste Ursache für Performance-Probleme. Bevor ein VDA deployed wird, steht das Ressourcenkonzept.</p>
           </div>
           <div class="philo-card card">
-            <span class="philo-icon" aria-hidden="true">🔁</span>
+            <span class="philo-icon"><Icon name="settings" size={22} /></span>
             <h3>Image-Disziplin</h3>
             <p>Saubere Master-Images, PVS-Workflows und WEM-Policies sind kein Overhead – sie sind die Basis für wartbaren Betrieb.</p>
           </div>
           <div class="philo-card card">
-            <span class="philo-icon" aria-hidden="true">📡</span>
+            <span class="philo-icon"><Icon name="chart-bar" size={22} /></span>
             <h3>Monitoring eingebaut</h3>
             <p>Citrix Director, SCOM-Integration und NetScaler Insights sind Pflicht, keine Kür. Man muss sehen, was passiert.</p>
           </div>
@@ -352,9 +353,10 @@ const highlights = [
   }
 
   .stack-icon {
-    font-size: 1.875rem;
+    width: 2.25rem; height: 2.25rem;
     margin-bottom: 0.875rem;
-    display: block;
+    display: flex; align-items: center;
+    color: var(--accent);
   }
 
   .stack-title {
@@ -408,7 +410,7 @@ const highlights = [
     gap: 0.5rem;
   }
 
-  .philo-icon { font-size: 1.5rem; }
+  .philo-icon { width: 1.5rem; height: 1.5rem; display: flex; align-items: center; color: var(--accent); }
 
   .philo-card h3 {
     font-size: 1rem;

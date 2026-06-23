@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Icon from '../components/Icon.astro';
 import { getCollection } from 'astro:content';
 
 const posts = (await getCollection('blog'))
@@ -8,13 +9,13 @@ const posts = (await getCollection('blog'))
   .slice(0, 3);
 
 const expertise = [
-  { icon: '🏗️', title: 'IT-Infrastruktur', desc: 'Aufbau und Betrieb robuster, skalierbarer IT-Landschaften – On-Premise, Hybrid und Cloud.' },
-  { icon: '☁️', title: 'Cloud & Migration', desc: 'Strategische Cloud-Migration mit Azure und Microsoft 365 – sicher, geplant und ohne Produktionsausfall.' },
-  { icon: '🔐', title: 'IT-Sicherheit', desc: 'Zero Trust, MDM und proaktive Sicherheitsstrategien für den modernen Unternehmensalltag.' },
-  { icon: '🤖', title: 'KI & Automatisierung', desc: 'Einsatz von KI-Tools und Prozessautomatisierung zur spürbaren Effizienzsteigerung im IT-Betrieb.' },
-  { icon: '📋', title: 'IT-Governance', desc: 'Strukturierte IT-Prozesse, ITSM und strategische Planung mit klaren Verantwortlichkeiten.' },
-  { icon: '👥', title: 'Führung & Mentoring', desc: 'IT-Teams aufbauen, entwickeln und durch technologischen Wandel begleiten.' },
-  { icon: '🖥️', title: 'Citrix', desc: '15+ Jahre Citrix-Expertise: Virtual Apps & Desktops, NetScaler, Provisioning, WEM und Citrix Hypervisor.', link: '/citrix' },
+  { icon: 'server',           title: 'IT-Infrastruktur',    desc: 'Aufbau und Betrieb robuster, skalierbarer IT-Landschaften – On-Premise, Hybrid und Cloud.' },
+  { icon: 'cloud',            title: 'Cloud & Migration',   desc: 'Strategische Cloud-Migration mit Azure und Microsoft 365 – sicher, geplant und ohne Produktionsausfall.' },
+  { icon: 'shield-lock',      title: 'IT-Sicherheit',       desc: 'Zero Trust, MDM und proaktive Sicherheitsstrategien für den modernen Unternehmensalltag.' },
+  { icon: 'cpu',              title: 'KI & Automatisierung',desc: 'Einsatz von KI-Tools und Prozessautomatisierung zur spürbaren Effizienzsteigerung im IT-Betrieb.' },
+  { icon: 'clipboard-list',   title: 'IT-Governance',       desc: 'Strukturierte IT-Prozesse, ITSM und strategische Planung mit klaren Verantwortlichkeiten.' },
+  { icon: 'users',            title: 'Führung & Mentoring', desc: 'IT-Teams aufbauen, entwickeln und durch technologischen Wandel begleiten.' },
+  { icon: 'layout-dashboard', title: 'Citrix',              desc: '15+ Jahre Citrix-Expertise: Virtual Apps & Desktops, NetScaler, Provisioning, WEM und Citrix Hypervisor.', link: '/citrix' },
 ];
 ---
 
@@ -87,7 +88,7 @@ const expertise = [
       <div class="expertise-grid">
         {expertise.map(item => (
           <div class="card expertise-card">
-            <div class="expertise-icon" aria-hidden="true">{item.icon}</div>
+            <div class="expertise-icon"><Icon name={item.icon} size={28} /></div>
             <h3 class="expertise-title">{item.title}</h3>
             <p class="expertise-desc">{item.desc}</p>
           </div>
@@ -293,9 +294,10 @@ const expertise = [
   }
 
   .expertise-icon {
-    font-size: 2rem;
+    width: 2.5rem; height: 2.5rem;
     margin-bottom: 1rem;
-    display: block;
+    display: flex; align-items: center;
+    color: var(--accent);
   }
 
   .expertise-title {
