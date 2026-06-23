@@ -13,7 +13,7 @@ Nach langer Suche und einem zähen Notartermin gehört das Haus jetzt mir. Altba
 ## Was ich beim Kauf wusste
 
 - Originale Elektrik aus den 60ern (muss komplett raus)
-- Alte Ölheizung (Austausch geplant)
+- Alte Gasheizung aus Ende der 90er (Austausch geplant)
 - Einfachverglasung in Teilen des Hauses
 - Badezimmer aus den 80ern – funktional, aber nicht mehr zeitgemäß
 

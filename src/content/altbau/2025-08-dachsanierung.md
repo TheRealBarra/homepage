@@ -1,12 +1,12 @@
 ---
 title: "Dachsanierung – Endlich dicht"
-description: "Ein Jahr nach dem Kauf: Das Dach wird saniert. Was nötig war, warum die undichte Gaube monatelang mein persönliches Damoklesschwert war, und was GEG damit zu tun hat."
+description: "Sechs Wochen nach der Übergabe: Das Dach wird saniert. Was nötig war, warum die undichte Gaube fünf Wochen mein persönliches Damoklesschwert war, und was GEG damit zu tun hat."
 pubDate: 2025-08-04
 status: abgeschlossen
 tags: ["Dach", "Dachsanierung", "Gaube", "GEG", "2025"]
 ---
 
-Seit dem Hauskauf stand fest, dass das Dach irgendwann dran ist. Das war keine Überraschung – ein Haus von 1956 mit dem Original-Dach hat seine besten Tage hinter sich. Und für GEG-Konformität (Gebäudeenergiegesetz) hätte eine Dachsanierung ohnehin kommen müssen.
+Sechs Wochen nach der Übergabe – und das Dach ist schon dran. Keine Überraschung an sich, ein Haus von 1956 mit dem Original-Dach hat seine besten Tage hinter sich. Und für GEG-Konformität (Gebäudeenergiegesetz) hätte eine Dachsanierung ohnehin kommen müssen.
 
 Was mich überrascht hat: Dass die Gaube im Kinderzimmer im Obergeschoss undicht war. So richtig undicht. Das war beim Kauf nicht erkennbar – und spätestens nach dem ersten ausgiebigen Regen nach Einzug dann schon.
 
