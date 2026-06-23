@@ -23,7 +23,7 @@ Dass das Dach seinen besten Tagen längst hinter sich hatte, war mir klar – GE
 
 Das haben wir nicht beim Kauf entdeckt. Das haben wir beim ersten ausgiebigen Regen nach dem Einzug entdeckt – als das Wasser durch die Gaube in den Innenbereich tropfte und die innere Wandfläche vollflächig durchnässte. Schöner Einstand.
 
-Von da an hatte ich bei jedem Regen und Sturm ein mulmiges Gefühl. Bis zum 4. August 2025, als die Dachfirma anfing. Eine temporäre Zwischenlösung war kaum umsetzbar – die Firma hatte nur noch wenige Wochen bis zum geplanten Baubeginn und keine freien Ressourcen für ein Provisorium vorher.
+Von da an hatte ich bei jedem Regen und Sturm ein mulmiges Gefühl. Schlüsselübergabe war der 26. Juni, Dachsanierung startete am 4. August – das waren gut fünf Wochen mit diesem Gefühl im Hinterkopf. Nicht Monate, aber bei jedem Unwetter-Regen fühlt sich das länger an als es ist. Eine temporäre Zwischenlösung war kaum umsetzbar – die Firma hatte nur noch wenige Wochen bis zum geplanten Baubeginn und keine freien Ressourcen für ein Provisorium vorher.
 
 ## Erste Maßnahmen
 

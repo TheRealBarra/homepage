@@ -18,9 +18,9 @@ Nicht ein bisschen Feuchtigkeit, kein gelegentliches Tropfen irgendwo. Der Regen
 
 ![Wasserschaden durch undichte Gaube: vollflächig durchfeuchtete Wand, abblätternde Tapete, Schutt am Boden](/altbau/gaube-wasserschaden.jpg)
 
-## Monate mit Mulmigem Gefühl
+## Fünf Wochen mit mulmigem Gefühl
 
-Von der Entdeckung bis zum Sanierungsstart am 1. September 2026 hatte ich bei jedem Regen und Sturm ein ganz bestimmtes Gefühl: das Wissen, dass gerade Wasser in mein Haus läuft und ich nichts dagegen tun kann außer hoffen, dass sich der Schaden in Grenzen hält.
+Schlüsselübergabe war der 26. Juni 2025, Baubeginn der 4. August – dazwischen lagen knapp fünf Wochen. Und bei jedem Regen und Sturm in dieser Zeit das gleiche Gefühl: Wasser läuft in mein Haus und ich kann nichts dagegen tun außer hoffen, dass sich der Schaden in Grenzen hält.
 
 Eine temporäre Zwischenlösung war kaum realistisch. Die Dachfirma hatte zu dem Zeitpunkt bereits den Baubeginn Anfang September fest geplant und keine freien Ressourcen für ein Provisorium drei Wochen vorher. Flicken und dann wieder aufmachen wäre auch handwerklich fragwürdig gewesen.
 
