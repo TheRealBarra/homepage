@@ -5,7 +5,7 @@ pubDate: 2025-11-20
 tags: ["Citrix", "UniconOS", "Endpoint Management", "DaaS"]
 ---
 
-Wer in Citrix-Umgebungen mit Thin Clients oder repurposed Hardware arbeitet, kennt UNICON. Das Kölner Unternehmen hat mit eLux und Scout seit Jahren eine der ausgereiftesten Lösungen für Endpoint-OS-Management im Citrix-Umfeld gebaut. Seit Ende 2025 gehört UNICON offiziell zu Citrix – und das ändert einiges.
+Wer in Citrix-Umgebungen mit Thin Clients oder repurposed Hardware arbeitet, kennt UNICON. Das deutsche Unternehmen hat mit eLux und Scout seit Jahren eine der ausgereiftesten Lösungen für Endpoint-OS-Management im Citrix-Umfeld gebaut. Seit Ende 2025 gehört UNICON offiziell zu Citrix – und das ändert einiges.
 
 ## Was ist passiert?
 
