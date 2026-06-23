@@ -1,49 +1,34 @@
 ---
 title: "Ist-Stand – Was steckt wirklich drin?"
-description: "Erste vollständige Bestandsaufnahme nach dem Kauf. Was ist gut, was muss weg, was ist eine böse Überraschung?"
+description: "Erste ehrliche Bestandsaufnahme in den Wochen nach der Übergabe. Teppich hoch, Dielen raus, Schlacke drunter – und dann kommt das Schadstoffgutachten."
 pubDate: 2025-08-01
 status: abgeschlossen
 tags: ["Bestandsaufnahme", "Planung"]
 ---
 
-Nach dem ersten Trubel rund um den Kauf war es Zeit für eine ehrliche Bestandsaufnahme. Zimmer für Zimmer, Keller bis Dach.
+Übergabe war der 26. Juni. In den Wochen danach: systematisch durch alle Räume, schauen was wirklich drin steckt. Die Antwort war in fast jedem Raum: mehr als gedacht.
 
-## Elektrik
+## Obergeschoss – Böden
 
-*(Details folgen – kurze Zusammenfassung: komplett erneuern)*
+Erster Schritt: Teppich im OG raus. Darunter: lackierte, klebrige alte Dielen. Nicht zu retten, also Dielen rausgehoben.
 
-## Heizung
+Darunter: Schlacke.
 
-*(Details folgen)*
+Das ist der Moment wo man kurz inne hält. Schlacke als Füllmaterial ist in Häusern dieser Baujahre nicht ungewöhnlich – aber Schlacke kann schadstoffbelastet sein. Also erstmal Schadstoffgutachten beauftragt bevor irgendwas weiter passiert. Kein Spaß, aber richtig so.
 
-## Böden
+## Tapeten – überall
 
-*(Details folgen)*
+Der Geruch im Haus war einer der Gründe die sofortige Entscheidung: alle Tapeten müssen raus. Kein selektives Vorgehen, kein "die eine Wand lassen wir". Komplett freilegen, lüften, neu anfangen.
 
-## Wände & Decken
+## Küche
 
-*(Details folgen)*
+Alte Fliesen abgeklopft. Ist Handarbeit, macht Lärm, macht Dreck – aber geht.
 
-## Bad & Sanitär
+## Wohnzimmer (EG)
 
-*(Details folgen)*
+Doppelte Maßnahme: Den alten Holzboden komplett entfernt und parallel den alten Putz neben der Tapete abgehauen. Beides musste weg um sauber auf einem definierten Zustand aufzubauen.
 
-## Fenster
+## Fazit dieser Phase
 
-*(Details folgen)*
+Die ersten Wochen nach der Übergabe waren kein Renovieren – das war Rückbau. Erst alles raus was nicht mehr tragfähig ist, dann weiß man womit man wirklich arbeitet. Das Schadstoffgutachten für die Schlacke war dabei keine Paranoia sondern Pflicht. Baujahr 1956, da gehört das dazu.
 
-## Keller
-
-*(Details folgen)*
-
-## Dachboden
-
-*(Details folgen)*
-
-## Mein Fazit nach der Bestandsaufnahme
-
-*(Hier kommt deine ehrliche Einschätzung – was hat dich überrascht, was war besser als erwartet?)*
-
----
-
-*Eintrag wird mit Fotos und Messdaten ergänzt.*
