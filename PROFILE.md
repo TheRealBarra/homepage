@@ -22,8 +22,10 @@
 
 | Jahr | Titel | Beschreibung |
 |------|-------|--------------|
+| 2011 | Citrix Virtual Desktop Hosting & Servervirtualisierung | Einstieg in Citrix VDH und Servervirtualisierung – Beginn der Citrix-Spezialisierung. |
 | 2018 | Start bei ibeco-Systems GmbH | Wechsel zu ibeco-Systems. Seither aktiver Fokus auf Hybrid-Cloud- und M365-Migrationen (Intune, Autopilot) sowie Aufbau der Citrix-Infrastruktur. |
 | vor 2018 | IT Administration & Projektleitung | IT-Administration, Projektentwicklung, Projektplanung, Teamleitung. Grundlage der 15+ Jahre Erfahrung. |
+| 2020 | Citrix Skalierung & non-persistent VDI | Skalierung auf non-persistent VDI-Basis, PVS/MCS, zentrale Imageverwaltung. |
 | 2021 | Cloud-Migration M365 | Migration der On-Premise-Infrastruktur in die Microsoft Cloud – ohne Produktionsausfall. |
 | 2023 | Web Application Firewall & IT Security | Fokus auf Absicherung von Web-Applikationen via NetScaler WAF sowie strategischer Ausbau der IT-Security-Architektur. |
 | 2024 | API-Integrationen & Systemvernetzung | Grundstein für Automatisierungsprojekte: API-Anbindungen zwischen bestehenden Systemen, um Datensilos aufzubrechen. |
