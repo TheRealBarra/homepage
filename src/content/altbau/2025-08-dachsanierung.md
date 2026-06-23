@@ -28,7 +28,9 @@ Also: warten, beobachten, Wetterbericht zu oft checken.
 
 ## Die Sanierung
 
-Ab 4. August 2025 lief die vollständige Dachsanierung – drei Wochen, dann war sie durch. Das umfasst:
+Ab 4. August 2025 lief die vollständige Dachsanierung – drei Wochen, dann war sie durch.
+
+![Dach während der Sanierung: Ziegel entfernt, alte aufgeweichte Dämmung zwischen den Dachlatten sichtbar](/altbau/dach-daemmung-aufgeweicht.jpg) Das umfasst:
 
 - Komplette Neueindeckung
 - Gaube sanieren und neu verkleiden

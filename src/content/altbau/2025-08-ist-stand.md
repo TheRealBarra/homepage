@@ -12,7 +12,13 @@ tags: ["Bestandsaufnahme", "Planung"]
 
 Erster Schritt: Teppich im OG raus. Darunter: lackierte, klebrige alte Dielen. Nicht zu retten, also Dielen rausgehoben.
 
+![Alte lackierte Dielen unter dem Teppich – klebrig, nicht mehr zu retten](/altbau/alte-dielen-klebrig.jpg)
+
 Darunter: Schlacke.
+
+![Schlackefund unter den Dielen – Schadstoffgutachten war Pflicht](/altbau/schlackefund-1.jpg)
+
+![Schlackeschicht unter den Dielen – Nahaufnahme](/altbau/schlackefund-2.jpg)
 
 Das ist der Moment wo man kurz inne hält. Schlacke als Füllmaterial ist in Häusern dieser Baujahre nicht ungewöhnlich – aber Schlacke kann schadstoffbelastet sein. Also erstmal Schadstoffgutachten beauftragt bevor irgendwas weiter passiert. Kein Spaß, aber richtig so.
 
@@ -23,6 +29,8 @@ Der Geruch im Haus war einer der Gründe die sofortige Entscheidung: alle Tapete
 ## Küche
 
 Alte Fliesen abgeklopft. Ist Handarbeit, macht Lärm, macht Dreck – aber geht.
+
+![Alte Küchenfliesen vor dem Abklopfen](/altbau/alte-kuechen-fliesen.jpg)
 
 ## Wohnzimmer (EG)
 
