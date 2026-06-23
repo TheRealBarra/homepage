@@ -16,6 +16,8 @@ Wasser. An der Innenseite der Gaubenwand. Vollflächig.
 
 Nicht ein bisschen Feuchtigkeit, kein gelegentliches Tropfen irgendwo. Der Regen lief durch die Gaubenverkleidung direkt in den Wandbereich, der innere Wandaufbau war durchnässt. Das ist die Art Überraschung, auf die man gerne verzichtet.
 
+![Wasserschaden durch undichte Gaube: vollflächig durchfeuchtete Wand, abblätternde Tapete, Schutt am Boden](/altbau/gaube-wasserschaden.jpg)
+
 ## Monate mit Mulmigem Gefühl
 
 Von der Entdeckung bis zum Sanierungsstart am 1. September 2026 hatte ich bei jedem Regen und Sturm ein ganz bestimmtes Gefühl: das Wissen, dass gerade Wasser in mein Haus läuft und ich nichts dagegen tun kann außer hoffen, dass sich der Schaden in Grenzen hält.
