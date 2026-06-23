@@ -31,7 +31,6 @@ const { Content } = await render(post);
         </div>
 
         <h1 class="article-title">{post.data.title}</h1>
-        <p class="article-desc">{post.data.description}</p>
 
         <div class="author-card">
           <div class="author-avatar" aria-hidden="true">MA</div>
@@ -40,6 +39,8 @@ const { Content } = await render(post);
             <span class="author-role">IT-Leiter</span>
           </div>
         </div>
+
+        <p class="article-desc">{post.data.description}</p>
       </header>
 
       <div class="prose">
