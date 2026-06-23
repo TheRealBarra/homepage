@@ -56,7 +56,7 @@ const stack = [
 
 <Layout
   title="Projekte – M. Apitz"
-  description="Private Entwicklungsprojekte: Contract Manager – eine selbst entwickelte Flask-App zur Verwaltung von Verträgen, Immobilien, Fahrzeugen und Budgets."
+  description="Private Entwicklungsprojekte und Bauprojekte: Contract Manager (Flask-App) und Altbau-Sanierung Baujahr 1965."
 >
   <!-- ── HEADER ─────────────────────────────── -->
   <section class="section projects-header">
@@ -155,6 +155,38 @@ const stack = [
               <p>Technisch korrekt zu sein reicht nicht. Wenn der Workflow umständlich ist, weicht man auf alte Gewohnheiten aus. Bootstrap 5 hat hier gute Arbeit geleistet.</p>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ALTBAU TEASER ─────────────────────── -->
+  <section class="section section-alt" style="padding-top: 1rem;">
+    <div class="container">
+      <p class="section-label">Weiteres Projekt</p>
+      <h2 class="section-title">Altbau 1965</h2>
+      <div class="divider"></div>
+      <div class="altbau-teaser card">
+        <div class="altbau-teaser-inner">
+          <div class="altbau-teaser-content">
+            <div class="project-meta">
+              <span class="badge badge-amber">Laufend</span>
+              <span class="project-type">Privates Projekt · 2025–heute</span>
+            </div>
+            <h3 class="altbau-teaser-title">Hauskauf & Sanierung</h3>
+            <p class="altbau-teaser-desc">
+              Altbau Baujahr 1965 – gekauft, entrümpelt, entkernet. Ich dokumentiere
+              die Sanierung chronologisch als Bautagebuch: von der Bestandsaufnahme
+              über Entkernung und Bodenarbeiten bis zur Fertigstellung.
+            </p>
+            <div class="altbau-teaser-tags">
+              <span class="tag">Hauskauf</span>
+              <span class="tag">Entkernung</span>
+              <span class="tag">Sanierung</span>
+              <span class="tag">Handwerk</span>
+            </div>
+          </div>
+          <a href="/altbau" class="btn btn-secondary altbau-cta">Zum Bautagebuch →</a>
         </div>
       </div>
     </div>
@@ -337,4 +369,53 @@ const stack = [
     line-height: 1.65;
     margin: 0;
   }
+
+  /* ALTBAU TEASER */
+  .altbau-teaser { margin-top: 0.5rem; }
+
+  .altbau-teaser-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .altbau-teaser-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem;
+    flex: 1;
+    min-width: 260px;
+  }
+
+  .badge-amber {
+    background: rgba(245,158,11,0.1);
+    color: #fbbf24;
+    border: 1px solid rgba(245,158,11,0.25);
+  }
+
+  .altbau-teaser-title {
+    font-size: clamp(1.5rem, 3vw, 2.25rem);
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    line-height: 1.1;
+    color: var(--text);
+  }
+
+  .altbau-teaser-desc {
+    font-size: 1rem;
+    color: var(--text-2);
+    line-height: 1.75;
+    max-width: 640px;
+    margin: 0;
+  }
+
+  .altbau-teaser-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .altbau-cta { white-space: nowrap; flex-shrink: 0; }
 </style>
