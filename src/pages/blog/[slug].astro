@@ -1,0 +1,244 @@
+---
+import { getCollection, render } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map(post => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<Layout
+  title={`${post.data.title} – M. Apitz`}
+  description={post.data.description}
+>
+  <article class="article-wrap">
+    <div class="container">
+      <header class="article-header">
+        <a href="/blog" class="back-link">← Zurück zum Blog</a>
+
+        <div class="post-meta">
+          <time datetime={post.data.pubDate.toISOString()}>
+            {post.data.pubDate.toLocaleDateString('de-DE', { day: '2-digit', month: 'long', year: 'numeric' })}
+          </time>
+          {post.data.tags?.map(tag => <span class="tag">{tag}</span>)}
+        </div>
+
+        <h1 class="article-title">{post.data.title}</h1>
+        <p class="article-desc">{post.data.description}</p>
+
+        <div class="author-card">
+          <div class="author-avatar" aria-hidden="true">MA</div>
+          <div>
+            <span class="author-name">M. Apitz</span>
+            <span class="author-role">IT-Leiter</span>
+          </div>
+        </div>
+      </header>
+
+      <div class="prose">
+        <Content />
+      </div>
+
+      <footer class="article-footer">
+        <a href="/blog" class="btn btn-secondary">← Alle Artikel</a>
+      </footer>
+    </div>
+  </article>
+</Layout>
+
+<style>
+  .article-wrap {
+    padding-top: 8rem;
+    padding-bottom: 5rem;
+  }
+
+  .article-header {
+    max-width: 780px;
+    margin: 0 auto 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.125rem;
+  }
+
+  .back-link {
+    color: var(--text-3);
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: color 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .back-link:hover { color: #a5b4fc; }
+
+  .post-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    flex-wrap: wrap;
+  }
+
+  .post-meta time {
+    font-size: 0.8125rem;
+    color: var(--text-3);
+  }
+
+  .article-title {
+    font-size: clamp(1.875rem, 4vw, 3rem);
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    line-height: 1.12;
+    color: var(--text);
+  }
+
+  .article-desc {
+    font-size: 1.125rem;
+    color: var(--text-2);
+    line-height: 1.75;
+  }
+
+  .author-card {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.875rem;
+    padding: 0.875rem 1.25rem;
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    backdrop-filter: blur(4px);
+  }
+
+  .author-avatar {
+    width: 38px; height: 38px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: #fff;
+    flex-shrink: 0;
+  }
+
+  .author-name {
+    display: block;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: var(--text);
+  }
+
+  .author-role {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--text-3);
+  }
+
+  /* ── PROSE ─────────────────────── */
+  .prose {
+    max-width: 780px;
+    margin: 0 auto;
+  }
+
+  .prose :global(h2) {
+    font-size: 1.625rem;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    margin: 2.75rem 0 1rem;
+    color: var(--text);
+    line-height: 1.25;
+  }
+
+  .prose :global(h3) {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 2.25rem 0 0.75rem;
+    color: var(--text);
+  }
+
+  .prose :global(p) {
+    color: var(--text-2);
+    font-size: 1.0625rem;
+    line-height: 1.85;
+    margin-bottom: 1.375rem;
+  }
+
+  .prose :global(ul),
+  .prose :global(ol) {
+    color: var(--text-2);
+    font-size: 1.0625rem;
+    line-height: 1.85;
+    margin-bottom: 1.375rem;
+    padding-left: 1.5rem;
+  }
+
+  .prose :global(li) { margin-bottom: 0.4rem; }
+
+  .prose :global(strong) {
+    color: var(--text);
+    font-weight: 600;
+  }
+
+  .prose :global(blockquote) {
+    border-left: 3px solid var(--accent);
+    padding: 0.875rem 1.375rem;
+    margin: 2rem 0;
+    background: rgba(15, 23, 42, 0.6);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    backdrop-filter: blur(4px);
+  }
+
+  .prose :global(blockquote p) {
+    margin: 0;
+    font-style: italic;
+    color: var(--text-2);
+  }
+
+  .prose :global(code) {
+    background: var(--bg-3);
+    padding: 0.15rem 0.4rem;
+    border-radius: 5px;
+    font-size: 0.875em;
+    color: #67e8f9;
+  }
+
+  .prose :global(pre) {
+    background: rgba(15, 23, 42, 0.8);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.375rem;
+    overflow-x: auto;
+    margin: 1.75rem 0;
+  }
+
+  .prose :global(pre code) {
+    background: none;
+    padding: 0;
+    font-size: 0.9rem;
+    color: var(--text);
+  }
+
+  .prose :global(hr) {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 3rem 0;
+  }
+
+  /* ── FOOTER ────────────────────── */
+  .article-footer {
+    max-width: 780px;
+    margin: 3.5rem auto 0;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+  }
+</style>
