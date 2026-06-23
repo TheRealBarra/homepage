@@ -6,7 +6,7 @@ tags: ["KI", "n8n", "Automatisierung", "API", "Security", "Digitalisierung"]
 draft: false
 ---
 
-Ich arbeite seit über acht Jahren im IT-Betrieb. In dieser Zeit habe ich gelernt: Keine Software funktioniert zu 100%. Und kaum eine Funktion klappt out-of-the-box so wie der Hersteller es im Datenblatt beschreibt. Das ist keine Kritik – das ist einfach die Realität des Betriebs.
+Ich arbeite seit über 15 Jahren im IT-Betrieb. In dieser Zeit habe ich gelernt: Keine Software funktioniert zu 100%. Und kaum eine Funktion klappt out-of-the-box so wie der Hersteller es im Datenblatt beschreibt. Das ist keine Kritik – das ist einfach die Realität des Betriebs.
 
 KI macht da keine Ausnahme. Nur dass bei KI die Fallhöhe gerade deutlich höher ist als bei einem Drucker der nicht druckt.
 

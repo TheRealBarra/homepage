@@ -12,6 +12,7 @@
 | Alter | 35 |
 | Rolle | IT-Leiter |
 | Arbeitgeber | ibeco-Systems GmbH |
+| Gesamte IT-Erfahrung | 15+ Jahre |
 | Dort seit | 2018 |
 | Wohnort | *(bitte ergänzen)* |
 
