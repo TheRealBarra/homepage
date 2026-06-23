@@ -1,4 +1,6 @@
 ---
+import ChatWidget from '../components/ChatWidget.astro';
+
 interface Props {
   title?: string;
   description?: string;
@@ -61,6 +63,8 @@ const currentPath = Astro.url.pathname;
     <main>
       <slot />
     </main>
+
+    <ChatWidget />
 
     <footer class="footer">
       <div class="container">

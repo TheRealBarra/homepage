@@ -1,0 +1,404 @@
+---
+// Chat-Widget mit Formspree-Backend
+---
+
+<!-- ── TOGGLE BUTTON ────────────────────────────────────── -->
+<button id="cw-toggle" aria-label="Chat öffnen" aria-expanded="false" aria-controls="cw-popup">
+  <!-- Chat icon (visible when closed) -->
+  <svg id="cw-icon-open" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+  </svg>
+  <!-- Close icon (visible when open) -->
+  <svg id="cw-icon-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+  </svg>
+</button>
+
+<!-- ── POPUP ─────────────────────────────────────────────── -->
+<div id="cw-popup" role="dialog" aria-label="Kontakt" aria-hidden="true">
+
+  <!-- Header -->
+  <div class="cw-header">
+    <div class="cw-avatar" aria-hidden="true">MA</div>
+    <div class="cw-header-info">
+      <strong>Michael Apitz</strong>
+      <span class="cw-status"><span class="cw-dot" aria-hidden="true"></span>Antwortet schnell</span>
+    </div>
+  </div>
+
+  <!-- Chat body -->
+  <div class="cw-body" id="cw-body">
+
+    <!-- Bot greeting -->
+    <div class="cw-msg cw-msg-bot">
+      <span>Hallo! 👋 Ich bin IT-Leiter bei ibeco-Systems und freue mich über Fragen – zu Citrix, IT-Strategie oder Projekten.</span>
+    </div>
+    <div class="cw-msg cw-msg-bot">
+      <span>Was kann ich für dich tun?</span>
+    </div>
+
+    <!-- Quick replies -->
+    <div class="cw-quick" id="cw-quick">
+      <button class="cw-quick-btn" data-topic="Frage">💬 Frage stellen</button>
+      <button class="cw-quick-btn" data-topic="Projekt">🚀 Projekt anfragen</button>
+      <button class="cw-quick-btn" data-topic="Citrix">🖥️ Citrix-Thema</button>
+    </div>
+
+    <!-- Contact form (hidden initially) -->
+    <form id="cw-form" class="cw-form" novalidate hidden>
+      <div class="cw-field">
+        <label for="cw-name">Dein Name</label>
+        <input id="cw-name" name="name" type="text" placeholder="Max Mustermann" autocomplete="name" required />
+      </div>
+      <div class="cw-field">
+        <label for="cw-email">E-Mail</label>
+        <input id="cw-email" name="email" type="email" placeholder="max@beispiel.de" autocomplete="email" required />
+      </div>
+      <div class="cw-field">
+        <label for="cw-message">Nachricht</label>
+        <textarea id="cw-message" name="message" rows="4" placeholder="Deine Nachricht..." required></textarea>
+      </div>
+      <input type="hidden" name="_subject" id="cw-subject" value="Neue Kontaktanfrage" />
+      <button type="submit" class="cw-submit" id="cw-submit">Absenden</button>
+    </form>
+
+    <!-- Success -->
+    <div id="cw-success" class="cw-success" hidden>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+      <strong>Nachricht gesendet!</strong>
+      <span>Ich melde mich so schnell wie möglich bei dir.</span>
+    </div>
+
+  </div>
+</div>
+
+<style>
+  /* ── TOGGLE BUTTON ── */
+  #cw-toggle {
+    position: fixed;
+    bottom: 1.75rem;
+    right: 1.75rem;
+    z-index: 9999;
+    width: 56px; height: 56px;
+    border-radius: 50%;
+    border: none;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: #fff;
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 4px 24px rgba(99,102,241,0.45);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  #cw-toggle:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 32px rgba(99,102,241,0.6);
+  }
+
+  #cw-toggle svg { width: 22px; height: 22px; transition: opacity 0.15s, transform 0.15s; }
+
+  #cw-icon-close { display: none; }
+  #cw-toggle[aria-expanded="true"] #cw-icon-open  { display: none; }
+  #cw-toggle[aria-expanded="true"] #cw-icon-close { display: block; }
+
+  /* ── POPUP ── */
+  #cw-popup {
+    position: fixed;
+    bottom: 5.5rem;
+    right: 1.75rem;
+    z-index: 9998;
+    width: 340px;
+    max-width: calc(100vw - 2rem);
+    background: #0f172a;
+    border: 1px solid rgba(99,102,241,0.25);
+    border-radius: 1.125rem;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.55);
+    display: flex; flex-direction: column;
+    overflow: hidden;
+    transform: scale(0.92) translateY(12px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.22s ease, transform 0.22s ease;
+    transform-origin: bottom right;
+  }
+
+  #cw-popup.open {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    pointer-events: auto;
+  }
+
+  /* ── HEADER ── */
+  .cw-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 1.125rem;
+    background: linear-gradient(135deg, rgba(99,102,241,0.18), rgba(139,92,246,0.12));
+    border-bottom: 1px solid rgba(99,102,241,0.15);
+  }
+
+  .cw-avatar {
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: #fff;
+    flex-shrink: 0;
+    letter-spacing: 0.02em;
+  }
+
+  .cw-header-info strong {
+    display: block;
+    font-size: 0.9375rem;
+    color: #f1f5f9;
+    font-weight: 700;
+  }
+
+  .cw-status {
+    display: flex; align-items: center; gap: 0.3rem;
+    font-size: 0.75rem;
+    color: #94a3b8;
+  }
+
+  .cw-dot {
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: #22c55e;
+    box-shadow: 0 0 6px rgba(34,197,94,0.6);
+    display: inline-block;
+  }
+
+  /* ── BODY ── */
+  .cw-body {
+    padding: 1rem;
+    display: flex; flex-direction: column; gap: 0.625rem;
+    max-height: 420px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(99,102,241,0.3) transparent;
+  }
+
+  /* ── MESSAGES ── */
+  .cw-msg {
+    max-width: 88%;
+    padding: 0.625rem 0.875rem;
+    border-radius: 1rem;
+    font-size: 0.875rem;
+    line-height: 1.55;
+    animation: cwFadeIn 0.25s ease;
+  }
+
+  .cw-msg-bot {
+    background: rgba(30,41,59,0.9);
+    border: 1px solid rgba(99,102,241,0.15);
+    color: #cbd5e1;
+    border-bottom-left-radius: 0.25rem;
+    align-self: flex-start;
+  }
+
+  .cw-msg-user {
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: #fff;
+    border-bottom-right-radius: 0.25rem;
+    align-self: flex-end;
+  }
+
+  /* ── QUICK REPLIES ── */
+  .cw-quick {
+    display: flex; flex-direction: column; gap: 0.375rem;
+    animation: cwFadeIn 0.3s ease 0.15s both;
+  }
+
+  .cw-quick-btn {
+    background: rgba(99,102,241,0.08);
+    border: 1px solid rgba(99,102,241,0.3);
+    color: #a5b4fc;
+    border-radius: 0.625rem;
+    padding: 0.5rem 0.875rem;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: left;
+    transition: background 0.15s, border-color 0.15s, color 0.15s;
+  }
+
+  .cw-quick-btn:hover {
+    background: rgba(99,102,241,0.18);
+    border-color: rgba(99,102,241,0.55);
+    color: #c7d2fe;
+  }
+
+  /* ── FORM ── */
+  .cw-form {
+    display: flex; flex-direction: column; gap: 0.625rem;
+    animation: cwFadeIn 0.25s ease;
+  }
+
+  .cw-field {
+    display: flex; flex-direction: column; gap: 0.25rem;
+  }
+
+  .cw-field label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #94a3b8;
+  }
+
+  .cw-field input,
+  .cw-field textarea {
+    background: rgba(15,23,42,0.9);
+    border: 1px solid rgba(99,102,241,0.25);
+    border-radius: 0.5rem;
+    color: #f1f5f9;
+    font-size: 0.875rem;
+    padding: 0.5rem 0.75rem;
+    font-family: inherit;
+    transition: border-color 0.15s;
+    resize: none;
+  }
+
+  .cw-field input:focus,
+  .cw-field textarea:focus {
+    outline: none;
+    border-color: #6366f1;
+  }
+
+  .cw-field input::placeholder,
+  .cw-field textarea::placeholder { color: #475569; }
+
+  .cw-submit {
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: #fff;
+    border: none;
+    border-radius: 0.625rem;
+    padding: 0.625rem 1rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: opacity 0.15s, transform 0.15s;
+    margin-top: 0.125rem;
+  }
+
+  .cw-submit:hover { opacity: 0.9; }
+  .cw-submit:active { transform: scale(0.98); }
+  .cw-submit:disabled { opacity: 0.55; cursor: not-allowed; }
+
+  /* ── SUCCESS ── */
+  .cw-success {
+    display: flex; flex-direction: column; align-items: center;
+    gap: 0.5rem; text-align: center;
+    padding: 1rem 0.5rem;
+    animation: cwFadeIn 0.3s ease;
+  }
+
+  .cw-success svg {
+    width: 44px; height: 44px;
+    stroke: #22c55e;
+  }
+
+  .cw-success strong { color: #f1f5f9; font-size: 1rem; }
+  .cw-success span   { color: #94a3b8; font-size: 0.8125rem; }
+
+  @keyframes cwFadeIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (max-width: 400px) {
+    #cw-popup { right: 0.75rem; bottom: 5rem; }
+    #cw-toggle { right: 0.75rem; bottom: 1.25rem; }
+  }
+</style>
+
+<script>
+  const toggle  = document.getElementById('cw-toggle')!;
+  const popup   = document.getElementById('cw-popup')!;
+  const body    = document.getElementById('cw-body')!;
+  const quick   = document.getElementById('cw-quick')!;
+  const form    = document.getElementById('cw-form') as HTMLFormElement;
+  const success = document.getElementById('cw-success')!;
+  const submit  = document.getElementById('cw-submit') as HTMLButtonElement;
+  const subject = document.getElementById('cw-subject') as HTMLInputElement;
+
+  // Toggle open/close
+  toggle.addEventListener('click', () => {
+    const isOpen = popup.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    popup.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+  });
+
+  // Close on Escape
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && popup.classList.contains('open')) {
+      popup.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+      popup.setAttribute('aria-hidden', 'true');
+    }
+  });
+
+  // Quick reply buttons
+  quick.querySelectorAll<HTMLButtonElement>('.cw-quick-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const topic = btn.dataset.topic ?? '';
+
+      // Show user bubble
+      const userMsg = document.createElement('div');
+      userMsg.className = 'cw-msg cw-msg-user';
+      userMsg.innerHTML = `<span>${btn.textContent}</span>`;
+      body.insertBefore(userMsg, quick);
+
+      // Hide quick replies
+      quick.hidden = true;
+
+      // Update email subject
+      subject.value = `Anfrage: ${topic} – homepage.mapitz.de`;
+
+      // Bot response
+      setTimeout(() => {
+        const botMsg = document.createElement('div');
+        botMsg.className = 'cw-msg cw-msg-bot';
+        botMsg.innerHTML = `<span>Super! Füll kurz das Formular aus und ich melde mich direkt per Mail.</span>`;
+        body.insertBefore(botMsg, form);
+        form.hidden = false;
+        body.scrollTop = body.scrollHeight;
+      }, 400);
+    });
+  });
+
+  // Form submit via fetch → Formspree
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+
+    const name    = (form.elements.namedItem('name')    as HTMLInputElement).value.trim();
+    const email   = (form.elements.namedItem('email')   as HTMLInputElement).value.trim();
+    const message = (form.elements.namedItem('message') as HTMLTextAreaElement).value.trim();
+
+    if (!name || !email || !message) return;
+
+    submit.disabled = true;
+    submit.textContent = 'Sende…';
+
+    try {
+      const res = await fetch('https://formspree.io/f/mgojvkay', {
+        method: 'POST',
+        headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, message, _subject: subject.value }),
+      });
+
+      if (res.ok) {
+        form.hidden = true;
+        success.hidden = false;
+        body.scrollTop = body.scrollHeight;
+      } else {
+        submit.disabled = false;
+        submit.textContent = 'Fehler – nochmal versuchen';
+      }
+    } catch {
+      submit.disabled = false;
+      submit.textContent = 'Fehler – nochmal versuchen';
+    }
+  });
+</script>
