@@ -1,0 +1,245 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+const entries = (await getCollection('altbau'))
+  .filter(e => !e.data.draft)
+  .sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf());
+
+const statusConfig = {
+  'abgeschlossen': { label: 'Abgeschlossen', color: 'green' },
+  'in-arbeit':     { label: 'In Arbeit',      color: 'amber' },
+  'geplant':       { label: 'Geplant',         color: 'gray'  },
+};
+---
+
+<Layout
+  title="Altbau-Projekt – M. Apitz"
+  description="Mein Altbau Baujahr 1965: Chronologisches Bautagebuch vom Hauskauf über die Entkernung bis zur Fertigstellung. Handwerk, Learnings und ehrliche Dokumentation."
+>
+  <!-- ── HEADER ─────────────────────────────── -->
+  <section class="section altbau-header">
+    <div class="container">
+      <p class="section-label fade-up fade-up-1">Privates Projekt</p>
+      <h1 class="section-title fade-up fade-up-2">
+        Altbau 1965<br />
+        <span class="gradient-text">Mein Bautagebuch</span>
+      </h1>
+      <div class="divider fade-up fade-up-2"></div>
+      <p class="section-desc fade-up fade-up-3">
+        Hauskauf, Entkernung, Sanierung – chronologisch dokumentiert.
+        Kein Hochglanz-Renovierungsblog, sondern echte Arbeit mit echten Rückschlägen.
+      </p>
+      <div class="altbau-stats fade-up fade-up-4">
+        <div class="astat">
+          <span class="astat-num">1965</span>
+          <span class="astat-label">Baujahr</span>
+        </div>
+        <div class="astat-div" aria-hidden="true"></div>
+        <div class="astat">
+          <span class="astat-num">{entries.filter(e => e.data.status === 'abgeschlossen').length}</span>
+          <span class="astat-label">Etappen abgeschlossen</span>
+        </div>
+        <div class="astat-div" aria-hidden="true"></div>
+        <div class="astat">
+          <span class="astat-num">{entries.length}</span>
+          <span class="astat-label">Einträge gesamt</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TIMELINE ───────────────────────────── -->
+  <section class="section" style="padding-top: 1rem;">
+    <div class="container">
+      <ol class="altbau-timeline" role="list">
+        {entries.map(entry => {
+          const s = statusConfig[entry.data.status];
+          return (
+            <li class="timeline-entry">
+              <div class="entry-date">
+                {entry.data.pubDate.toLocaleDateString('de-DE', { month: 'long', year: 'numeric' })}
+              </div>
+              <div class={`entry-dot dot-${s.color}`} aria-hidden="true"></div>
+              <a href={`/altbau/${entry.id}`} class="card entry-card">
+                <div class="entry-header">
+                  <h2 class="entry-title">{entry.data.title}</h2>
+                  <span class={`status-badge status-${s.color}`}>{s.label}</span>
+                </div>
+                <p class="entry-desc">{entry.data.description}</p>
+                {entry.data.tags && (
+                  <div class="entry-tags">
+                    {entry.data.tags.map(tag => <span class="tag">{tag}</span>)}
+                  </div>
+                )}
+                <span class="entry-read">Eintrag lesen →</span>
+              </a>
+            </li>
+          );
+        })}
+      </ol>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .altbau-header { padding-top: 9rem; padding-bottom: 1rem; }
+
+  /* STATS */
+  .altbau-stats {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    width: fit-content;
+    backdrop-filter: blur(8px);
+    margin-top: 2rem;
+  }
+
+  .astat {
+    display: flex;
+    flex-direction: column;
+    padding: 1.125rem 1.75rem;
+    border-right: 1px solid var(--border);
+  }
+
+  .astat:last-child { border-right: none; }
+
+  .astat-num {
+    font-size: 1.75rem;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    background: linear-gradient(135deg, #f59e0b, #f97316);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1.1;
+  }
+
+  .astat-label {
+    font-size: 0.75rem;
+    color: var(--text-3);
+    font-weight: 500;
+    margin-top: 0.2rem;
+    white-space: nowrap;
+  }
+
+  .astat-div {
+    width: 0;
+    /* borders handled by astat */
+  }
+
+  /* TIMELINE */
+  .altbau-timeline {
+    list-style: none;
+    position: relative;
+    max-width: 860px;
+  }
+
+  .altbau-timeline::before {
+    content: '';
+    position: absolute;
+    left: 148px;
+    top: 0; bottom: 0;
+    width: 1px;
+    background: var(--border);
+  }
+
+  .timeline-entry {
+    display: grid;
+    grid-template-columns: 148px 16px 1fr;
+    gap: 1.5rem;
+    align-items: start;
+    padding-bottom: 2rem;
+  }
+
+  .entry-date {
+    text-align: right;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--text-3);
+    padding-top: 1.75rem;
+    line-height: 1.4;
+  }
+
+  .entry-dot {
+    width: 14px; height: 14px;
+    border-radius: 50%;
+    margin-top: 1.8125rem;
+    flex-shrink: 0;
+  }
+
+  .dot-green { background: #22c55e; box-shadow: 0 0 10px rgba(34,197,94,0.5); }
+  .dot-amber { background: #f59e0b; box-shadow: 0 0 10px rgba(245,158,11,0.5); }
+  .dot-gray  { background: var(--text-3); }
+
+  /* ENTRY CARD */
+  .entry-card {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .entry-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .entry-title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1.3;
+  }
+
+  .status-badge {
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 0.2rem 0.625rem;
+    border-radius: 999px;
+    white-space: nowrap;
+    flex-shrink: 0;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .status-green { background: rgba(34,197,94,0.1);  color: #4ade80; border: 1px solid rgba(34,197,94,0.2); }
+  .status-amber { background: rgba(245,158,11,0.1); color: #fbbf24; border: 1px solid rgba(245,158,11,0.2); }
+  .status-gray  { background: rgba(100,116,139,0.1); color: var(--text-3); border: 1px solid var(--border); }
+
+  .entry-desc {
+    font-size: 0.9375rem;
+    color: var(--text-2);
+    line-height: 1.7;
+  }
+
+  .entry-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .entry-read {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #fbbf24;
+    margin-top: 0.125rem;
+  }
+
+  @media (max-width: 580px) {
+    .altbau-timeline::before { left: 0; }
+    .timeline-entry { grid-template-columns: 14px 1fr; }
+    .entry-date { display: none; }
+    .altbau-stats { flex-direction: column; width: 100%; }
+    .astat { border-right: none; border-bottom: 1px solid var(--border); }
+    .astat:last-child { border-bottom: none; }
+  }
+</style>

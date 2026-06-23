@@ -13,4 +13,16 @@ const blog = defineCollection({
   }),
 });
 
-export const collections = { blog };
+const altbau = defineCollection({
+  loader: glob({ base: './src/content/altbau', pattern: '**/*.{md,mdx}' }),
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    pubDate: z.coerce.date(),
+    status: z.enum(['abgeschlossen', 'in-arbeit', 'geplant']).default('geplant'),
+    tags: z.array(z.string()).optional(),
+    draft: z.boolean().optional().default(false),
+  }),
+});
+
+export const collections = { blog, altbau };
