@@ -59,3 +59,11 @@ Für Unternehmen, die Citrix DaaS mit Microsoft Entra ID betreiben und UniconOS-
 ---
 
 *Du betreibst FAS in deiner Umgebung und überlegst, ob der Wechsel Sinn macht? Schreib mir – ich teile gerne konkrete Erfahrungen aus der Praxis.*
+
+## Quellen & weiterführende Links
+
+- Citrix Blog (Januar 2026): [Sign in once, get more done: Why continuous identity is a strategic advantage](https://www.citrix.com/blogs/2026/01/26/sign-in-once-get-more-done-why-continuous-identity-is-a-strategic-advantage/)
+- Citrix Docs: [Federated Authentication Service (FAS)](https://docs.citrix.com/en-us/federated-authentication-service)
+- Citrix Tech Zone: [Secure Authentication with Citrix UniconOS](https://community.citrix.com/techzone-blogs/citrix-unicon/sign-in-once-get-more-done-secure-authentication-with-citrix-unicon-os/)
+- Microsoft Learn: [Was ist Microsoft Entra ID?](https://learn.microsoft.com/de-de/entra/fundamentals/whatis)
+- Microsoft Learn: [Conditional Access](https://learn.microsoft.com/de-de/entra/identity/conditional-access/overview)

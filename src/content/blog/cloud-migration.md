@@ -69,3 +69,11 @@ Die Cloud ist nicht das Ziel. Agilität, Skalierbarkeit und Sicherheit sind das 
 ---
 
 *Du stehst vor einer ähnlichen Migration? Ich teile gerne detailliertere Erfahrungen.*
+
+## Quellen & weiterführende Links
+
+- Microsoft Learn: [Cloud Adoption Framework – Migrate](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/migrate/)
+- Microsoft Learn: [Microsoft Assessment and Planning Toolkit](https://learn.microsoft.com/en-us/previous-versions/bb977556(v=technet.10))
+- Microsoft Learn: [Azure Migrate](https://learn.microsoft.com/en-us/azure/migrate/migrate-services-overview)
+- Microsoft: [Microsoft 365 Migration Guide](https://learn.microsoft.com/en-us/microsoft-365/enterprise/microsoft-365-overview)
+- Microsoft: [Microsoft Secure Score](https://learn.microsoft.com/en-us/microsoft-365/security/defender/microsoft-secure-score)

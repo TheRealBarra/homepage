@@ -49,3 +49,11 @@ Die Migrationspfade sind klar kommuniziert:
 ---
 
 *Du betreibst noch eLux/Scout im klassischen Setup? Gerne tausche ich mich über Migrationserfahrungen aus.*
+
+## Quellen & weiterführende Links
+
+- Citrix: [UniconOS – Produktseite](https://www.citrix.com/platform/unicon-elux/)
+- Citrix Blog (Juni 2026): [UniconOS Management Cloud](https://www.citrix.com/blogs/2026/06/12/uniconos-management-cloud-a-simpler-way-to-manage-enterprise-endpoints-without-infrastructure-overhead/)
+- Citrix Docs: [UniconOS Dokumentation](https://docs.citrix.com/en-us/unicon-elux-scout)
+- Citrix: [Windows 10 Migration mit UniconOS](https://www.citrix.com/platform/unicon-elux/windows-10-migration.html)
+- Citrix: [IGEL OS 11 Migration mit UniconOS](https://www.citrix.com/platform/unicon-elux/igel-os-11-migration.html)

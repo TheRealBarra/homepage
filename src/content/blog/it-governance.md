@@ -55,3 +55,10 @@ IT-Governance ist kein Ziel, sondern ein Werkzeug. Das beste Framework ist das, 
 ---
 
 *Was sind deine Erfahrungen mit IT-Governance im Mittelstand? Ich freue mich über den Austausch.*
+
+## Quellen & weiterführende Links
+
+- AXELOS: [ITIL 4 Foundation](https://www.axelos.com/certifications/itil-service-management/itil-4-foundation) – Offizielles ITIL-Framework
+- ISACA: [COBIT 2019](https://www.isaca.org/resources/cobit) – Governance-Framework für Enterprise IT
+- Atlassian: [JIRA Service Management](https://www.atlassian.com/software/jira/service-management) – ITSM-Tool für Mittelstand
+- BMI/BSI: [IT-Grundschutz-Kompendium](https://www.bsi.bund.de/DE/Themen/Unternehmen-und-Organisationen/Standards-und-Zertifizierung/IT-Grundschutz/IT-Grundschutz-Kompendium/it-grundschutz-kompendium_node.html)

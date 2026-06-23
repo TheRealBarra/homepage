@@ -84,3 +84,11 @@ Als IT-Leiter ist die wichtigste Infrastruktur, die man aufbauen kann, keine tec
 ---
 
 *Welche Führungspraktiken haben in deinem Team den größten Unterschied gemacht? Ich bin gespannt auf deine Erfahrungen.*
+
+## Quellen & weiterführende Links
+
+- Gallup: [CliftonStrengths – State of the Global Workplace](https://www.gallup.com/cliftonstrengths/en/253868/popular-clifton-strengths-assessment-products.aspx)
+- Google re:Work: [Project Aristotle – Was macht Teams erfolgreich?](https://rework.withgoogle.com/print/guides/5721312655835136/)
+- Dan Pink: [Drive – The Surprising Truth About What Motivates Us](https://www.danpink.com/books/drive/) (2009)
+- Amy Edmondson (Harvard): [The Fearless Organization](https://fearlessorganization.com/) – Grundlagenwerk zu Psychological Safety
+- Gallup: [How Employees' Strengths Make Your Company Stronger](https://www.gallup.com/businessjournal/186044/employees-strengths-company-stronger.aspx)

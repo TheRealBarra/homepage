@@ -57,3 +57,10 @@ Wer Zero Trust als rein technisches Projekt betrachtet, wird scheitern. Wer es a
 ---
 
 *Hast du Fragen zu deiner eigenen Zero Trust Implementierung? Schreib mir gerne.*
+
+## Quellen & weiterführende Links
+
+- Microsoft: [Zero Trust Security Model](https://www.microsoft.com/en-us/security/business/zero-trust) – Übersicht des Microsoft Zero Trust-Frameworks
+- NIST SP 800-207: [Zero Trust Architecture](https://csrc.nist.gov/publications/detail/sp/800/207/final) – Offizielle NIST-Publikation
+- Microsoft Learn: [Zero Trust deployment guide](https://learn.microsoft.com/en-us/security/zero-trust/zero-trust-overview)
+- Forrester Research: *"Never Trust, Always Verify"* – Ursprüngliche Prägung des Begriffs durch John Kindervag (2010)

@@ -1,0 +1,339 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const features = [
+  {
+    icon: '📋',
+    title: 'Vertragsverwaltung',
+    desc: 'Verträge mit Dokumenten-Upload, Zahlungszyklen, Laufzeiten und automatischen Ablauferinnerungen.',
+  },
+  {
+    icon: '🏠',
+    title: 'Immobilienverwaltung',
+    desc: 'Objekte mit zugehörigen Dokumenten, Mietverträgen, Notizen und Kostenübersicht.',
+  },
+  {
+    icon: '🚗',
+    title: 'Fahrzeugverwaltung',
+    desc: 'Fahrzeuge mit TÜV-Tracking, Serviceverlauf, Versicherungen und Kostenverfolgung.',
+  },
+  {
+    icon: '📦',
+    title: 'Inventarverwaltung',
+    desc: 'Gegenstände mit Seriennummern, Garantiefristen und hinterlegten Kaufbelegen.',
+  },
+  {
+    icon: '📅',
+    title: 'Kalender & Fristen',
+    desc: 'Zentraler Überblick über Zahlungen, Vertragsenden, TÜV-Termine und Geburtstage.',
+  },
+  {
+    icon: '📊',
+    title: 'Analytics & Budgets',
+    desc: 'Kostenübersicht, monatliche Verbindlichkeiten und Ausgabenstatistiken auf einen Blick.',
+  },
+  {
+    icon: '📇',
+    title: 'Adressbuch',
+    desc: 'Kontakte zu Vermietern, Versicherungen, Werkstätten und Dienstleistern – alles verknüpft.',
+  },
+  {
+    icon: '💾',
+    title: 'Backup & Restore',
+    desc: 'Automatisches Backup der SQLite-Datenbank inkl. Uploads, vollständig wiederherstellbar.',
+  },
+];
+
+const stack = [
+  { label: 'Backend', value: 'Python · Flask · SQLAlchemy · Gunicorn' },
+  { label: 'Frontend', value: 'Bootstrap 5 · Bootstrap Icons · Jinja2' },
+  { label: 'Datenbank', value: 'SQLite' },
+  { label: 'Betrieb', value: 'Docker · Docker Compose · SSL/TLS' },
+  { label: 'Features', value: 'Responsive Design · Backup/Restore · Datei-Upload' },
+];
+---
+
+<Layout
+  title="Projekte – M. Apitz"
+  description="Private Entwicklungsprojekte: Contract Manager – eine selbst entwickelte Flask-App zur Verwaltung von Verträgen, Immobilien, Fahrzeugen und Budgets."
+>
+  <!-- ── HEADER ─────────────────────────────── -->
+  <section class="section projects-header">
+    <div class="container">
+      <p class="section-label fade-up fade-up-1">Private Projekte</p>
+      <h1 class="section-title fade-up fade-up-2">Was ich nebenbei baue</h1>
+      <div class="divider fade-up fade-up-2"></div>
+      <p class="section-desc fade-up fade-up-3">
+        IT-Strategie ist mein Beruf. Entwickeln ist mein Ausgleich.
+        Wenn mir ein Tool fehlt, baue ich es selbst.
+      </p>
+    </div>
+  </section>
+
+  <!-- ── PROJECT CARD ───────────────────────── -->
+  <section class="section" style="padding-top: 1rem;">
+    <div class="container">
+      <div class="project-hero card">
+        <div class="project-hero-inner">
+          <div class="project-meta">
+            <span class="badge">Aktiv in Betrieb</span>
+            <span class="project-type">Privates Projekt · 2024–heute</span>
+          </div>
+          <h2 class="project-title">Contract Manager</h2>
+          <p class="project-tagline">
+            Eine selbst entwickelte Web-App, die ich täglich nutze – um Verträge,
+            Immobilien, Fahrzeuge, Verbindlichkeiten und alle wichtigen Dokumente
+            an einem Ort zu verwalten.
+          </p>
+          <div class="project-origin">
+            <div class="origin-icon" aria-hidden="true">💡</div>
+            <div>
+              <strong>Warum ich es gebaut habe:</strong> Verträge lagen in E-Mails,
+              PDFs auf verschiedenen Geräten, Fristen in Notizen. Kein Tool am Markt
+              hat genau das gemacht, was ich brauchte – also habe ich es selbst entwickelt.
+              Die App läuft als Docker-Container selbst gehostet und enthält keine
+              Cloud-Abhängigkeiten für die Daten.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FEATURES -->
+      <div class="features-grid">
+        {features.map(f => (
+          <div class="card feature-card">
+            <span class="feature-icon" aria-hidden="true">{f.icon}</span>
+            <h3 class="feature-title">{f.title}</h3>
+            <p class="feature-desc">{f.desc}</p>
+          </div>
+        ))}
+      </div>
+
+      <!-- STACK -->
+      <div class="stack-section card">
+        <h2 class="stack-heading">Tech-Stack</h2>
+        <div class="stack-list">
+          {stack.map(s => (
+            <div class="stack-row">
+              <span class="stack-label">{s.label}</span>
+              <span class="stack-value">{s.value}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- LEARNINGS -->
+      <div class="learnings card">
+        <h2 class="learnings-heading">Was ich dabei gelernt habe</h2>
+        <div class="learnings-grid">
+          <div class="learning-item">
+            <span class="learning-num">01</span>
+            <div>
+              <strong>Produktdenkweise schlägt Feature-Liste</strong>
+              <p>Ein Tool, das man selbst täglich nutzt, entwickelt sich anders als ein Kundenprojekt. Man merkt sofort, was fehlt – und was man dachte zu brauchen, aber nie nutzt.</p>
+            </div>
+          </div>
+          <div class="learning-item">
+            <span class="learning-num">02</span>
+            <div>
+              <strong>Docker für private Projekte ist keine Overkill</strong>
+              <p>Selbst gehostete Apps profitieren massiv von Container-Disziplin: Reproduzierbare Umgebung, einfaches Update, klare Datentrennung durch Volumes.</p>
+            </div>
+          </div>
+          <div class="learning-item">
+            <span class="learning-num">03</span>
+            <div>
+              <strong>SQLite ist unterschätzt</strong>
+              <p>Für eine Single-User-App ist SQLite die perfekte Wahl. Kein Server, Backup ist eine Datei-Kopie, und die Performance ist für diesen Use-Case völlig ausreichend.</p>
+            </div>
+          </div>
+          <div class="learning-item">
+            <span class="learning-num">04</span>
+            <div>
+              <strong>UX entscheidet ob man das Tool wirklich nutzt</strong>
+              <p>Technisch korrekt zu sein reicht nicht. Wenn der Workflow umständlich ist, weicht man auf alte Gewohnheiten aus. Bootstrap 5 hat hier gute Arbeit geleistet.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .projects-header { padding-top: 9rem; padding-bottom: 1rem; }
+
+  /* PROJECT HERO */
+  .project-hero {
+    margin-bottom: 2rem;
+  }
+
+  .project-hero-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .project-meta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .project-type {
+    font-size: 0.8125rem;
+    color: var(--text-3);
+    font-weight: 500;
+  }
+
+  .project-title {
+    font-size: clamp(1.875rem, 4vw, 3rem);
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    line-height: 1.1;
+  }
+
+  .project-tagline {
+    font-size: 1.0625rem;
+    color: var(--text-2);
+    line-height: 1.75;
+    max-width: 760px;
+  }
+
+  .project-origin {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    background: rgba(99, 102, 241, 0.06);
+    border: 1px solid rgba(99, 102, 241, 0.15);
+    border-radius: var(--radius);
+    padding: 1.25rem;
+    font-size: 0.9375rem;
+    color: var(--text-2);
+    line-height: 1.7;
+  }
+
+  .origin-icon { font-size: 1.25rem; flex-shrink: 0; margin-top: 0.1rem; }
+
+  .project-origin strong { color: var(--text); }
+
+  /* FEATURES */
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+  }
+
+  .feature-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    padding: 1.5rem;
+  }
+
+  .feature-icon { font-size: 1.625rem; }
+
+  .feature-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text);
+  }
+
+  .feature-desc {
+    font-size: 0.875rem;
+    color: var(--text-2);
+    line-height: 1.65;
+  }
+
+  /* STACK */
+  .stack-section {
+    margin-bottom: 2rem;
+  }
+
+  .stack-heading {
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+    color: var(--text);
+  }
+
+  .stack-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .stack-row {
+    display: flex;
+    align-items: baseline;
+    gap: 1.5rem;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .stack-row:last-child { border-bottom: none; }
+
+  .stack-label {
+    font-size: 0.8125rem;
+    font-weight: 700;
+    color: #a5b4fc;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    min-width: 100px;
+    flex-shrink: 0;
+  }
+
+  .stack-value {
+    font-size: 0.9375rem;
+    color: var(--text-2);
+  }
+
+  /* LEARNINGS */
+  .learnings-heading {
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin-bottom: 1.75rem;
+    color: var(--text);
+  }
+
+  .learnings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.75rem;
+  }
+
+  .learning-item {
+    display: flex;
+    gap: 1.25rem;
+    align-items: flex-start;
+  }
+
+  .learning-num {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    flex-shrink: 0;
+    line-height: 1.2;
+  }
+
+  .learning-item strong {
+    display: block;
+    font-size: 0.9375rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 0.375rem;
+  }
+
+  .learning-item p {
+    font-size: 0.875rem;
+    color: var(--text-2);
+    line-height: 1.65;
+    margin: 0;
+  }
+</style>
