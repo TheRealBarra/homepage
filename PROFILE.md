@@ -104,7 +104,20 @@
 
 ---
 
-## Offene Fragen / TODOs
+## Schreibstil & Ton (für Blog-Artikel)
+
+- **Humor gehört dazu** — nicht Klamauk, aber ein trockener Witz ist erlaubt und gewünscht
+- **IT-Pragmatismus** — keine Software funktioniert zu 100%, kaum eine Funktion klappt out-of-the-box ohne Anpassung
+- **Anwender-Realismus** — *"105% der Anwender lügen"* (überspitzt: der Anwender gibt selten zu, wenn er selbst etwas kaputt gemacht hat)
+- **Kein Hochglanz-Marketing** — Dinge die nicht funktioniert haben dürfen erwähnt werden
+- **Direkte Meinung** — kein ewiges Abwägen aller Seiten, klare Haltung
+- **Kein Fazit-Zwang** — nicht jeder Artikel muss sich am Ende selbst zusammenfassen
+- **Keine perfekte Struktur** — nicht jeder Gedanke braucht einen H2-Header
+- **Kurze Sätze** wenn ein Punkt klar ist. Kein Ausschmücken.
+
+---
+
+
 
 - [ ] Citrix-Zahlen (40+ CVAD, 500+ VDA-Nodes) prüfen und ggf. korrigieren
 - [ ] Wohnort / Impressum-Adresse nachtragen
