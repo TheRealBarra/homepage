@@ -66,11 +66,11 @@ Wir haben Security nicht nachgelagert, sondern als integralen Bestandteil der Mi
 
 Das hat initialen Mehraufwand bedeutet, uns aber viele Nacharbeiten erspart.
 
-## Gesamtfazit
+## Was am Ende wirklich zählt
 
-Cloud-Migration ist kein IT-Projekt – es ist ein Unternehmensprojekt. Wer sie allein in der IT-Abteilung verantwortet, hat schon verloren. Wer früh das Management einbindet, die Fachbereiche abholt und Security als Enabler positioniert, wird erfolgreich sein.
+Cloud-Migration ist kein IT-Projekt, sondern ein Unternehmensprojekt. Wer sie allein in der IT-Abteilung verantwortet, hat im Grunde schon verloren – er weiß es nur noch nicht. Wer früh das Management einbindet, die Fachbereiche abholt und Security nicht als Bremse, sondern als Enabler positioniert, kommt durch.
 
-Die Cloud ist nicht das Ziel. Agilität, Skalierbarkeit und Sicherheit sind das Ziel – die Cloud ist das Werkzeug.
+Und der wichtigste Satz zum Schluss: Die Cloud ist nicht das Ziel. Das Ziel sind Agilität, Skalierbarkeit und Sicherheit. Die Cloud ist nur das Werkzeug – ein gutes, aber eben eines, das man auch falsch benutzen kann.
 
 ---
 

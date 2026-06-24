@@ -5,11 +5,11 @@ pubDate: 2026-04-08
 tags: ["Führung", "Team", "Leadership", "Motivation"]
 ---
 
-Es gibt eine Führungspraxis, die ich in fast jeder Organisation beobachte – und die fast überall das Gegenteil von dem bewirkt, was sie soll. Man könnte sie „Fehler-Management" nennen: Meetings, in denen Probleme besprochen werden. Retrospektiven, die hauptsächlich aus Kritik bestehen. Feedback-Gespräche, die sich anfühlen wie eine Bestandsaufnahme von Unzulänglichkeiten.
+Es gibt eine Führungspraxis, die ich in fast jeder Organisation sehe – und die fast überall das Gegenteil von dem bewirkt, was sie soll. Man könnte sie „Fehler-Management" nennen: Meetings, in denen ausschließlich Probleme besprochen werden. Retrospektiven, die in Wahrheit Anklagebänke sind. Feedback-Gespräche, die sich anfühlen wie eine Inventur der eigenen Unzulänglichkeiten.
 
-Die Absicht dahinter ist meistens gut. Man will verbessern. Man will Standards setzen. Man will, dass Dinge nicht nochmal falsch laufen.
+Die Absicht dahinter ist fast immer gut. Man will verbessern, Standards setzen, dafür sorgen, dass derselbe Mist nicht zweimal passiert.
 
-Das Problem: Es funktioniert nicht so.
+Funktioniert nur nicht. Im Gegenteil.
 
 ## Was Fehler-Fokus im Gehirn anrichtet
 

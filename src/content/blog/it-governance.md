@@ -5,52 +5,35 @@ pubDate: 2024-10-08
 tags: ["IT-Governance", "ITIL", "Management"]
 ---
 
-„Wir sollten ITIL einführen." Dieser Satz hat in so mancher IT-Abteilung für kollektives Augenrollen gesorgt – zu Recht, aber auch nicht ganz zu Recht. Das Problem liegt selten im Framework selbst, sondern in der Art seiner Einführung.
+„Wir sollten ITIL einführen." Dieser Satz hat schon in mancher IT-Abteilung kollektives Augenrollen ausgelöst – zu Recht und zu Unrecht zugleich. Das Problem liegt nämlich selten am Framework. Es liegt daran, wie man es einführt.
 
-## Warum Governance oft scheitert
+## Warum Governance scheitert
 
-Klassische Fehler, die ich selbst gemacht und beobachtet habe:
+Die Klassiker, die ich teils selbst verbockt, teils aus sicherer Entfernung beobachtet habe:
 
-**Framework-Purismus**: Man versucht, ITIL v4 oder COBIT in seiner vollen Ausprägung einzuführen. Das Ergebnis: Prozesse, die niemand lebt, Dokumentationen, die keiner liest, und Tickets, die nach Schema F bearbeitet werden – ohne Mehrwert.
+Da ist der **Framework-Purismus** – der Versuch, ITIL v4 oder COBIT in voller Pracht auszurollen. Das Ergebnis sind Prozesse, die niemand lebt, Dokumente, die niemand liest, und Tickets, die nach Schema F abgearbeitet werden. Viel Zeremonie, wenig Wirkung.
 
-**Top-down ohne Einbindung**: Governance wird vom Management verordnet, aber die Mitarbeiter verstehen den Sinn nicht. Ergebnis: passive Sabotage durch Nichtnutzung.
+Dann das **Top-down-Dekret**: Governance wird vom Management verordnet, der Sinn aber nie erklärt. Was folgt, ist passive Sabotage durch Nichtnutzung – die höflichste Form, „Nein" zu sagen.
 
-**Zu viel auf einmal**: Change Management, Incident Management, Problem Management – alles gleichzeitig. Das überfordert jedes Team.
+Und schließlich der Versuch, **alles auf einmal** zu machen. Change, Incident und Problem Management gleichzeitig einzuführen überfordert jedes Team, das nebenbei noch den Laden am Laufen halten muss. Also: alle.
 
-## Was wirklich funktioniert: Der pragmatische Ansatz
+## Was tatsächlich funktioniert
 
-Nach mehreren Iterationen habe ich einen Ansatz entwickelt, der im Mittelstand funktioniert:
+Nach ein paar Iterationen – und der einen oder anderen, sagen wir, lehrreichen Erfahrung – ist mein Ansatz heute deutlich unaufgeregter.
 
-### 1. Fang mit dem größten Schmerzpunkt an
+Ich fange nicht mit dem Framework an, sondern mit dem größten Schmerzpunkt. Tickets gehen verloren? Dann ein Ticketsystem. Änderungen reißen regelmäßig Systeme um? Dann Change Management. Niemand weiß, was wo installiert ist? Dann eine CMDB. Der Trick ist nicht, schlau zu sein – der Trick ist, dort anzufangen, wo der Nutzen sofort sichtbar wird. Sichtbarer Nutzen erzeugt Akzeptanz, und Akzeptanz ist die Währung, in der Governance bezahlt wird.
 
-Nicht mit dem Framework, sondern mit dem Problem. Wenn Tickets verloren gehen → Ticket-System einführen. Wenn Änderungen Systeme destabilisieren → Change Management einführen. Wenn niemand weiß, was wo installiert ist → CMDB einführen.
+Ein Service-Katalog ist dabei mehr wert, als die meisten denken – aber nicht für die IT, sondern für das Gespräch mit dem Business. Wenn alle verstehen, was die IT liefert und was es kostet (an Zeit, Geld und Risiko), wird aus Gegeneinander plötzlich ein Miteinander. Manchmal jedenfalls.
 
-Der Vorteil: Sofortiger sichtbarer Nutzen, der die Akzeptanz für weitere Schritte schafft.
+Bei SLAs gilt: lieber wenige, dafür ehrliche. Interne SLAs sind entweder unrealistisch oder zahnlos, oft beides. Eine Handvoll, die wirklich Konsequenzen haben und gemeinsam mit dem Business definiert wurden, schlägt zwanzig, die in einem Dokument verstauben.
 
-### 2. Service Catalog als Kommunikationsmittel
+Und Metriken? Die durchschnittliche MTTR interessiert außerhalb der IT exakt niemanden. „20 % weniger kritische Ausfälle im letzten Quartal" dagegen versteht die Geschäftsführung sofort. Man muss die Zahlen nur in der Sprache erzählen, die der Zuhörer spricht.
 
-Ein gut gepflegter Service Catalog ist Gold wert – nicht für die IT, sondern für die Kommunikation mit dem Business. Wenn alle verstehen, **was** die IT liefert und was es kostet (Zeit, Geld, Risiko), verbessert sich die Zusammenarbeit dramatisch.
+## Womit wir arbeiten
 
-### 3. SLAs – aber ehrliche
+Keine Glaubensfrage, sondern das, was sich im Alltag bewährt hat: JIRA Service Management für Incident und Change, Confluence als Knowledge Base, Azure Monitor und Defender fürs Monitoring, Power BI fürs Reporting. Nichts davon ist heilig – es funktioniert, also bleibt es.
 
-Interne SLAs haben oft das Problem, dass sie entweder unrealistisch oder zahnlos sind. Meine Empfehlung: Lieber weniger SLAs, aber mit echter Konsequenz bei Nichteinhaltung. Und: SLAs immer gemeinsam mit dem Business definieren.
-
-### 4. Metriken, die jemand interessieren
-
-Niemand interessiert sich für „durchschnittliche MTTR". Aber: „Wir haben im letzten Quartal 20 % weniger kritische Ausfälle gehabt" – das versteht die Geschäftsführung.
-
-## Meine Toolchain
-
-Was wir heute erfolgreich nutzen:
-
-- **JIRA Service Management** für Incident und Change Management
-- **Confluence** für Knowledge Base und Dokumentation
-- **Azure Monitor + Defender** für Monitoring und Security
-- **Power BI** für IT-Reporting und KPI-Dashboards
-
-## Fazit
-
-IT-Governance ist kein Ziel, sondern ein Werkzeug. Das beste Framework ist das, das dein Team nutzt – auch wenn es „nur" 30 % von ITIL ist. Pragmatismus vor Perfektion.
+IT-Governance ist kein Ziel, sondern ein Werkzeug. Das beste Framework ist nicht das vollständigste, sondern das, das dein Team tatsächlich benutzt – und wenn das „nur" 30 % von ITIL sind, dann sind das 30 %, die wirken. Pragmatismus schlägt Perfektion. Jeden Tag.
 
 ---
 

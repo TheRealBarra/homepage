@@ -5,54 +5,33 @@ pubDate: 2024-11-15
 tags: ["Security", "Zero Trust", "Strategie"]
 ---
 
-In meiner Laufbahn als IT-Leiter habe ich viele Sicherheitskonzepte kommen und gehen sehen. Zero Trust ist anders – es ist kein Buzzword, das nach drei Jahren in der Versenkung verschwindet. Es ist die logische Antwort auf eine Welt, in der der klassische Netzwerkperimeter längst erodiert ist.
+In meiner Laufbahn als IT-Leiter habe ich genug Sicherheitskonzepte kommen und gehen sehen, um bei Buzzwords erstmal reflexartig die Augenbrauen hochzuziehen. Bei Zero Trust habe ich das auch getan – und mich geirrt. Es ist kein Trend, der nach drei Jahren wieder verschwindet, sondern die logische Konsequenz daraus, dass der klassische Netzwerkperimeter längst nicht mehr existiert.
 
-## Der Tod des Perimeters
+## Die Burg hat keinen Burggraben mehr
 
-Jahrelang galt das Prinzip: Alles innerhalb des Firmennetzwerks ist vertrauenswürdig, alles außerhalb ist gefährlich. Diese Annahme war schon immer vereinfachend – heute ist sie schlicht falsch.
+Jahrelang galt: innen ist sicher, außen ist gefährlich. Diese Annahme war immer schon eine Vereinfachung. Heute ist sie einfach falsch.
 
-Mitarbeiter arbeiten von überall. Anwendungen laufen in der Cloud. Partner und Dienstleister haben direkten Zugriff auf interne Systeme. Die „sichere Burg mit Burggraben" existiert nicht mehr.
+Mitarbeiter arbeiten von zu Hause, vom Flughafen, vom Café. Anwendungen laufen in der Cloud. Dienstleister haben direkten Zugriff auf interne Systeme. Wer in dieser Welt noch glaubt, das Firmen-LAN sei eine vertrauenswürdige Zone, der hat die letzten zehn Jahre verschlafen.
 
-## Was Zero Trust wirklich bedeutet
+Das Prinzip von Zero Trust passt auf einen Bierdeckel: **Never trust, always verify.** Kein Benutzer, kein Gerät, kein Dienst bekommt automatisch Vertrauen – egal von wo er kommt. Auch nicht der Geschäftsführer aus dem Eckbüro.
 
-Das Prinzip ist einfach: **Never trust, always verify.** Kein Benutzer, kein Gerät und kein Dienst erhält automatisch Vertrauen – egal wo er sich befindet.
+## Wie das in der Praxis aussieht
 
-Konkret bedeutet das:
+Die Theorie ist schnell erzählt: identitätsbasierter Zugriff statt netzwerkbasiert, jede Anfrage wird geprüft, minimale Rechte, Verschlüsselung überall. Klingt sauber. Die Umsetzung war es nicht.
 
-- **Identitätsbasierter Zugriff**: Jede Authentifizierung wird geprüft – mit MFA, Conditional Access und risikobasierter Bewertung
-- **Gerätekonformität**: Nur gemanagte und konforme Geräte erhalten Zugriff auf sensible Systeme
-- **Minimale Rechte**: Jeder Benutzer hat nur die Berechtigungen, die er für seine aktuelle Aufgabe braucht
-- **Verschlüsselung überall**: Kein Traffic – intern oder extern – läuft unverschlüsselt
+Wir haben mit Identity angefangen, und das aus gutem Grund: Solange die Identitätsinfrastruktur nicht sauber ist, ist alles andere Kosmetik. Conditional Access in Entra ID, MFA für *alle* – und ja, das schließt die Geschäftsführung ein. Die Diskussion darüber war anstrengender als die technische Umsetzung. Genau dieser eine Schritt hat die Angriffsfläche mehr reduziert als alles, was danach kam.
 
-## Die Realität der Einführung
+Der zweite Schritt war Sichtbarkeit. Man kann nicht schützen, was man nicht sieht – und vorher haben wir schlicht nicht gesehen, was in der Umgebung wirklich passiert. Defender for Endpoint und Defender for Cloud Apps haben uns einen Überblick gegeben, der ernüchternd und hilfreich zugleich war.
 
-Theorie und Praxis klaffen bei Zero Trust oft auseinander. Meine Erfahrungen aus der Implementierung:
+Erst danach kamen Segmentierung und granulare Zugriffskontrolle. Schrittweise, mit zeitlich begrenzten Ausnahmen, weil eine Ausnahme die man nicht terminiert keine Ausnahme ist, sondern die neue Regel.
 
-### Phase 1: Identity als Fundament
+## Woran es wirklich hängt
 
-Bevor irgendetwas anderes geschieht, muss die Identitätsinfrastruktur sauber sein. In unserem Fall bedeutete das: Azure AD Conditional Access Policies, MFA für alle Benutzer (keine Ausnahmen für die Geschäftsführung!), und eine klare Geräteverwaltung mit Intune.
+Die technischen Hürden waren nicht das Problem. Das Problem war wie immer der Mensch.
 
-Dieser Schritt allein hat die Angriffsfläche dramatisch reduziert.
+Mitarbeiter verstehen Einschränkungen nicht, solange ihnen niemand das Warum erklärt. „Warum funktioniert mein altes Passwort nicht mehr?" ist keine Sabotage, sondern eine berechtigte Frage – die man besser beantwortet, bevor sie gestellt wird. Und dann sind da die Legacy-Anwendungen, die von modernen Authentifizierungsprotokollen so viel halten wie ich von Faxgeräten. Für die braucht es Kompromisse, und Kompromisse vertragen sich schlecht mit einem Prinzip, das „always verify" heißt.
 
-### Phase 2: Sichtbarkeit herstellen
-
-Man kann nicht schützen, was man nicht sieht. Microsoft Defender for Cloud Apps und Defender for Endpoint haben uns einen Überblick gegeben, den wir vorher schlicht nicht hatten.
-
-> „Sicherheit beginnt nicht mit Technik – sie beginnt mit Sichtbarkeit."
-
-### Phase 3: Segmentierung und Zugriffskontrolle
-
-Netzwerksegmentierung und Application Proxies haben wir schrittweise eingeführt. Wichtig: Jeden Schritt kommunizieren, Mitarbeiter schulen, Ausnahmen zeitlich begrenzen.
-
-## Was ich gelernt habe
-
-Zero Trust ist kein Projekt mit Anfang und Ende – es ist eine kontinuierliche Reise. Die größten Hürden sind nicht technischer Natur:
-
-- **Change Management**: Mitarbeiter verstehen die Einschränkungen nicht
-- **Management Buy-in**: „Warum funktioniert mein altes Passwort nicht mehr?"
-- **Legacy-Systeme**: Alte Anwendungen, die keine modernen Authentifizierungsprotokolle unterstützen
-
-Wer Zero Trust als rein technisches Projekt betrachtet, wird scheitern. Wer es als organisatorischen Wandel versteht, wird langfristig erfolgreich sein.
+Wer Zero Trust als reines Technikprojekt aufzieht, scheitert. Nicht vielleicht – sicher. Es ist ein organisatorischer Wandel, der zufällig viel Technik braucht. Und es ist nichts, das man abschließt: Es gibt kein Datum, an dem man „fertig mit Zero Trust" ist. Das ist unbequem für jeden, der gerne Projekte abhakt. Mich eingeschlossen.
 
 ---
 
