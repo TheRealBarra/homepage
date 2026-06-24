@@ -29,12 +29,9 @@ const comingSoonHTML = `<!DOCTYPE html>
 </html>`;
 
 export default {
-  async fetch(request: Request, env: { COMING_SOON?: string; ASSETS: Fetcher }): Promise<Response> {
-    if (env.COMING_SOON === 'true') {
-      return new Response(comingSoonHTML, {
-        headers: { 'Content-Type': 'text/html; charset=utf-8' },
-      });
-    }
-    return env.ASSETS.fetch(request);
+  async fetch(_request: Request, _env: unknown): Promise<Response> {
+    return new Response(comingSoonHTML, {
+      headers: { 'Content-Type': 'text/html; charset=utf-8' },
+    });
   },
 };
