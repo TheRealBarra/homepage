@@ -1,0 +1,303 @@
+---
+import { milestones, categories, type Milestone } from '../data/timeline';
+
+interface Props {
+  /** ids vorhandener Einträge unter src/content/altbau/ */
+  existingEntries?: string[];
+}
+const { existingEntries = [] } = Astro.props;
+
+const parse = (iso: string) => new Date(iso + 'T12:00:00');
+
+const sorted = [...milestones].sort((a, b) => a.date.localeCompare(b.date));
+
+const monthFmt = new Intl.DateTimeFormat('de-DE', { month: 'short', year: 'numeric' });
+const fullFmt = new Intl.DateTimeFormat('de-DE', { day: '2-digit', month: 'long', year: 'numeric' });
+
+type Group = { key: string; label: string; items: Milestone[] };
+const groups: Group[] = [];
+for (const m of sorted) {
+  const d = parse(m.date);
+  const key = `${d.getFullYear()}-${d.getMonth()}`;
+  let g = groups.find((x) => x.key === key);
+  if (!g) {
+    g = { key, label: monthFmt.format(d), items: [] };
+    groups.push(g);
+  }
+  g.items.push(m);
+}
+
+function dateText(m: Milestone): string {
+  if (m.dateLabel) return m.dateLabel;
+  const start = fullFmt.format(parse(m.date));
+  if (m.endDate) return `${start} – ${fullFmt.format(parse(m.endDate))}`;
+  return start;
+}
+
+function dayLabel(m: Milestone): string {
+  const d = parse(m.date).getDate();
+  if (m.endDate) return `${d}–${parse(m.endDate).getDate()}`;
+  return String(d);
+}
+
+const total = sorted.length;
+const withEntry = sorted.filter((m) => m.entry && existingEntries.includes(m.entry)).length;
+---
+
+<section class="zeitstrahl" aria-label="Interaktiver Zeitstrahl der Sanierung">
+  <div class="zs-head">
+    <div>
+      <h2 class="zs-title">Zeitstrahl</h2>
+      <p class="zs-sub">{total} Etappen · {withEntry} ausführliche Einträge</p>
+    </div>
+    <div class="zs-legend" role="group" aria-label="Nach Kategorie filtern">
+      {Object.entries(categories).map(([key, c]) => (
+        <button class="zs-chip" data-cat={key} style={`--c:${c.color}`} aria-pressed="false">
+          <span class="zs-chip-dot" aria-hidden="true"></span>{c.label}
+        </button>
+      ))}
+    </div>
+  </div>
+
+  <div class="zs-scroll">
+    <div class="zs-track">
+      {groups.map((g) => (
+        <div class="zs-month">
+          <div class="zs-month-label">{g.label}</div>
+          <div class="zs-nodes">
+            {g.items.map((m) => {
+              const c = categories[m.category];
+              const hasEntry = !!(m.entry && existingEntries.includes(m.entry));
+              const Tag = hasEntry ? 'a' : 'button';
+              return (
+                <Tag
+                  class:list={['zs-node', { 'has-entry': hasEntry }]}
+                  data-cat={m.category}
+                  data-date={dateText(m)}
+                  data-title={m.title}
+                  data-catlabel={c.label}
+                  data-color={c.color}
+                  data-entry={hasEntry ? 'true' : 'false'}
+                  style={`--c:${c.color}`}
+                  href={hasEntry ? `/altbau/${m.entry}` : undefined}
+                  type={hasEntry ? undefined : 'button'}
+                  aria-label={`${dateText(m)}: ${m.title}`}
+                >
+                  <span class="zs-dot" aria-hidden="true"></span>
+                  <span class="zs-day" aria-hidden="true">{dayLabel(m)}</span>
+                </Tag>
+              );
+            })}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <div class="zs-detail" aria-live="polite">
+    <span class="zs-d-date">Interaktiver Zeitstrahl</span>
+    <span class="zs-d-title">Fahr über einen Punkt für Details – größere Punkte mit Glow führen zu einem ausführlichen Eintrag.</span>
+    <span class="zs-d-meta">
+      <span class="zs-d-cat" hidden></span>
+      <a class="zs-d-link" hidden>Eintrag lesen →</a>
+    </span>
+  </div>
+</section>
+
+<style>
+  .zeitstrahl { margin-bottom: 3.5rem; }
+
+  .zs-head {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 1.5rem;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 1.25rem;
+  }
+  .zs-title { font-size: 1.25rem; font-weight: 700; color: var(--text); }
+  .zs-sub { font-size: 0.8125rem; color: var(--text-3); margin-top: 0.15rem; }
+
+  .zs-legend { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+  .zs-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.3rem 0.65rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-3);
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    cursor: pointer;
+    transition: color 0.15s, border-color 0.15s, background 0.15s;
+  }
+  .zs-chip:hover { color: var(--text); border-color: var(--c); }
+  .zs-chip.sel {
+    color: var(--text);
+    border-color: var(--c);
+    background: color-mix(in srgb, var(--c) 16%, transparent);
+  }
+  .zs-chip-dot { width: 9px; height: 9px; border-radius: 50%; background: var(--c); }
+
+  .zs-scroll {
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 0.5rem;
+    scrollbar-width: thin;
+    scrollbar-color: var(--bg-3) transparent;
+    -webkit-overflow-scrolling: touch;
+  }
+  .zs-scroll::-webkit-scrollbar { height: 8px; }
+  .zs-scroll::-webkit-scrollbar-thumb { background: var(--bg-3); border-radius: 999px; }
+
+  .zs-track { display: flex; align-items: flex-start; gap: 1.75rem; min-width: min-content; padding: 0.25rem 0; }
+
+  .zs-month { display: flex; flex-direction: column; gap: 0.65rem; }
+  .zs-month-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--text-3);
+    white-space: nowrap;
+    padding-left: 0.1rem;
+  }
+
+  .zs-nodes { display: flex; gap: 1rem; position: relative; padding-top: 0.5rem; }
+  .zs-nodes::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: calc(0.5rem + 8px);
+    height: 2px;
+    background: var(--border);
+    z-index: 0;
+  }
+
+  .zs-node {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.35rem;
+    width: 1.75rem;
+    padding: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.15s, opacity 0.15s;
+  }
+  .zs-node:hover,
+  .zs-node:focus-visible { transform: translateY(-3px); outline: none; }
+
+  .zs-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--c);
+    border: 2px solid var(--bg);
+    box-shadow: 0 0 0 1px var(--c);
+    transition: box-shadow 0.15s, transform 0.15s;
+  }
+  .zs-node.has-entry .zs-dot {
+    width: 17px;
+    height: 17px;
+    box-shadow: 0 0 12px var(--c), 0 0 0 2px var(--c);
+  }
+  .zs-node:hover .zs-dot,
+  .zs-node:focus-visible .zs-dot { box-shadow: 0 0 14px var(--c), 0 0 0 2px var(--c); }
+
+  .zs-day { font-size: 0.65rem; font-weight: 600; color: var(--text-3); transition: color 0.15s; }
+  .zs-node:hover .zs-day,
+  .zs-node:focus-visible .zs-day { color: var(--text); }
+
+  .zs-node.dim { opacity: 0.18; }
+  .zs-node.dim:hover { opacity: 0.5; }
+
+  .zs-detail {
+    margin-top: 1.25rem;
+    min-height: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    padding: 1rem 1.25rem;
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--c, var(--border));
+    border-radius: var(--radius-lg);
+    transition: border-color 0.2s;
+  }
+  .zs-d-date {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--text-3);
+  }
+  .zs-d-title { font-size: 1rem; font-weight: 600; color: var(--text); line-height: 1.4; }
+  .zs-d-meta { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; margin-top: 0.15rem; }
+  .zs-d-cat { font-size: 0.78rem; font-weight: 600; color: var(--text-2); display: inline-flex; align-items: center; gap: 0.45rem; }
+  .zs-d-cat::before { content: ''; width: 9px; height: 9px; border-radius: 50%; background: var(--c, var(--text-3)); }
+  .zs-d-link { font-size: 0.8rem; font-weight: 600; color: #f59e0b; text-decoration: none; }
+  .zs-d-link:hover { text-decoration: underline; }
+
+  @media (max-width: 640px) {
+    .zs-head { flex-direction: column; }
+  }
+</style>
+
+<script>
+  function initZeitstrahl() {
+    const strahl = document.querySelector<HTMLElement>('.zeitstrahl');
+    if (!strahl) return;
+
+    const detail = strahl.querySelector<HTMLElement>('.zs-detail')!;
+    const dDate = detail.querySelector<HTMLElement>('.zs-d-date')!;
+    const dTitle = detail.querySelector<HTMLElement>('.zs-d-title')!;
+    const dCat = detail.querySelector<HTMLElement>('.zs-d-cat')!;
+    const dLink = detail.querySelector<HTMLAnchorElement>('.zs-d-link')!;
+    const nodes = Array.from(strahl.querySelectorAll<HTMLElement>('.zs-node'));
+    const chips = Array.from(strahl.querySelectorAll<HTMLElement>('.zs-chip'));
+
+    function showDetail(node: HTMLElement) {
+      const color = node.dataset.color || '';
+      detail.style.setProperty('--c', color);
+      dDate.textContent = node.dataset.date || '';
+      dTitle.textContent = node.dataset.title || '';
+      dCat.textContent = node.dataset.catlabel || '';
+      dCat.style.setProperty('--c', color);
+      dCat.hidden = false;
+      if (node.dataset.entry === 'true' && node.tagName === 'A') {
+        dLink.hidden = false;
+        dLink.href = node.getAttribute('href') || '#';
+      } else {
+        dLink.hidden = true;
+      }
+    }
+
+    nodes.forEach((n) => {
+      n.addEventListener('mouseenter', () => showDetail(n));
+      n.addEventListener('focus', () => showDetail(n));
+    });
+
+    chips.forEach((chip) => {
+      chip.addEventListener('click', () => {
+        const isSel = chip.classList.toggle('sel');
+        chip.setAttribute('aria-pressed', String(isSel));
+        const selected = chips.filter((c) => c.classList.contains('sel')).map((c) => c.dataset.cat);
+        nodes.forEach((n) => {
+          const show = selected.length === 0 || selected.includes(n.dataset.cat);
+          n.classList.toggle('dim', !show);
+        });
+      });
+    });
+  }
+
+  initZeitstrahl();
+  document.addEventListener('astro:page-load', initZeitstrahl);
+</script>

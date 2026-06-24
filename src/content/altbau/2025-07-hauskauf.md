@@ -1,7 +1,7 @@
 ---
 title: "Hauskauf – Der Schlüssel ist da"
 description: "Nach langer Suche: Altbau Baujahr 1956, Kaufvertrag unterschrieben, Schlüsselübergabe. Was mich erwartet, wusste ich damals noch nicht ganz."
-pubDate: 2025-07-01
+pubDate: 2025-06-26
 status: abgeschlossen
 tags: ["Hauskauf", "Planung"]
 ---

@@ -1,10 +1,13 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
+import AltbauTimeline from '../../components/AltbauTimeline.astro';
 
 const entries = (await getCollection('altbau'))
   .filter(e => !e.data.draft)
   .sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf());
+
+const existingEntries = entries.map(e => e.id);
 
 const statusConfig = {
   'abgeschlossen': { label: 'Abgeschlossen', color: 'green' },
@@ -52,6 +55,8 @@ const statusConfig = {
   <!-- ── TIMELINE ───────────────────────────── -->
   <section class="section" style="padding-top: 1rem;">
     <div class="container">
+      <AltbauTimeline existingEntries={existingEntries} />
+
       <ol class="altbau-timeline" role="list">
         {entries.map(entry => {
           const s = statusConfig[entry.data.status];

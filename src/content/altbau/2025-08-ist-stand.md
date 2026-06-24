@@ -1,7 +1,7 @@
 ---
 title: "Ist-Stand – Was steckt wirklich drin?"
-description: "Erste ehrliche Bestandsaufnahme in den Wochen nach der Übergabe. Teppich hoch, Dielen raus, Schlacke drunter – und dann kommt das Schadstoffgutachten."
-pubDate: 2025-08-01
+description: "Erste ehrliche Bestandsaufnahme in den Wochen nach der Übergabe. Teppich hoch, Dielen raus, Schlacke drunter – und dann braucht es ein Schadstoffgutachten."
+pubDate: 2025-07-15
 status: abgeschlossen
 tags: ["Bestandsaufnahme", "Planung"]
 ---
@@ -20,7 +20,7 @@ Darunter: Schlacke.
 
 ![Schlackeschicht unter den Dielen – Nahaufnahme](/altbau/schlackefund-2.jpg)
 
-Das ist der Moment wo man kurz inne hält. Schlacke als Füllmaterial ist in Häusern dieser Baujahre nicht ungewöhnlich – aber Schlacke kann schadstoffbelastet sein. Also erstmal Schadstoffgutachten beauftragt bevor irgendwas weiter passiert. Kein Spaß, aber richtig so.
+Das ist der Moment wo man kurz inne hält. Schlacke als Füllmaterial ist in Häusern dieser Baujahre nicht ungewöhnlich – aber Schlacke kann schadstoffbelastet sein. Also war klar: Erst Proben nehmen und Schadstoffgutachten beauftragen, bevor die Schlacke überhaupt angefasst wird. Die Probenentnahme und die beiden Gutachten (Asbest und PAK) liefen dann parallel zu den Dacharbeiten – mehr dazu im Eintrag zur Schlacke. Kein Spaß, aber richtig so.
 
 ## Tapeten – überall
 
@@ -38,5 +38,5 @@ Doppelte Maßnahme: Den alten Holzboden komplett entfernt und parallel den alten
 
 ## Fazit dieser Phase
 
-Die ersten Wochen nach der Übergabe waren kein Renovieren – das war Rückbau. Erst alles raus was nicht mehr tragfähig ist, dann weiß man womit man wirklich arbeitet. Das Schadstoffgutachten für die Schlacke war dabei keine Paranoia sondern Pflicht. Baujahr 1956, da gehört das dazu.
+Die ersten Wochen nach der Übergabe waren kein Renovieren – das war Rückbau. Erst alles raus was nicht mehr tragfähig ist, dann weiß man womit man wirklich arbeitet. Die Schadstoffgutachten für die Schlacke waren dabei keine Paranoia sondern Pflicht. Baujahr 1956, da gehört das dazu.
 
