@@ -75,11 +75,11 @@
 | Hosting | Selbst gehostet, Docker-Container, SSL/TLS |
 | Features | Vertragsverwaltung, Immobilien, Fahrzeuge, Inventar, Kalender/Fristen, Analytics, Adressbuch, Backup/Restore |
 
-### Altbau 1965
+### Altbau 1956
 | Feld | Wert |
 |------|------|
 | Hauskauf | Juli 2025 |
-| Baujahr | 1965 |
+| Baujahr | 1956 |
 | Status | Laufende Sanierung |
 | Dokumentiert als | Chronologisches Bautagebuch unter /altbau |
 | Bisherige Etappen | Hauskauf (Jul 2025), Ist-Stand (Aug 2025), Entkernung (Sep 2025), Bodenarbeiten (Sep 2025) |
