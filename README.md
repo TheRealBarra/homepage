@@ -1,3 +1,16 @@
+# fragapitz.de – Homepage
+
+## Go-Live Checkliste
+
+Die Seite zeigt aktuell eine "Coming Soon"-Seite. Um live zu gehen:
+
+1. `worker.ts` im Repo-Root löschen
+2. In `wrangler.toml` die Zeile `main = "worker.ts"` entfernen
+3. In Cloudflare → Workers & Pages → `homepage` → Settings → Variables and Secrets → `COMING_SOON` Variable löschen (falls vorhanden)
+4. Pushen → fertig
+
+---
+
 # Astro Starter Kit: Basics
 
 ```sh
