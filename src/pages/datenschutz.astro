@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { site, impressumIstVollstaendig } from '../data/site';
 ---
 
 <Layout
@@ -9,9 +10,12 @@ import Layout from '../layouts/Layout.astro';
   <section class="legal-page section">
     <div class="container">
       <div class="legal-content">
-        <div class="legal-notice">
-          ⚠️ <strong>Muster-Datenschutzerklärung</strong> — Bitte alle mit <code>[…]</code> markierten Felder anpassen. Im Zweifel rechtliche Prüfung empfohlen.
-        </div>
+        {!impressumIstVollstaendig && (
+          <div class="legal-notice">
+            ⚠️ <strong>Noch nicht veröffentlichungsbereit</strong> — die E-Mail-Adresse in
+            <code>src/data/site.ts</code> ist noch ein Platzhalter.
+          </div>
+        )}
 
         <h1 class="legal-title">Datenschutzerklärung</h1>
         <p class="legal-subtitle">Gemäß Art. 13, 14 DSGVO</p>
@@ -20,18 +24,22 @@ import Layout from '../layouts/Layout.astro';
           <h2>1. Verantwortlicher</h2>
           <p>
             Verantwortlicher im Sinne der DSGVO:<br /><br />
-            Michael Apitz<br />
-            [Straße und Hausnummer]<br />
-            [PLZ] [Ort]<br />
-            E-Mail: <a href="mailto:[deine@email.de]">[deine@email.de]</a>
+            {site.name}<br />
+            E-Mail: <a href={`mailto:${site.email}`}>{site.email}</a>
+          </p>
+          <p>
+            Diese Website ist ein rein privates, nicht-gewerbliches Angebot. Auf die
+            Angabe einer postalischen Anschrift wird aus Gründen des persönlichen
+            Datenschutzes verzichtet; die E-Mail-Adresse ist der zuverlässige Weg,
+            mich zu erreichen und deine Rechte nach Abschnitt 7 geltend zu machen.
           </p>
         </div>
 
         <div class="legal-section">
           <h2>2. Hosting</h2>
           <p>
-            Diese Website wird bei Cloudflare Pages (Cloudflare, Inc., 101 Townsend St.,
-            San Francisco, CA 94107, USA) gehostet. Beim Aufruf dieser Website werden
+            Diese Website wird als statische Seite bei Cloudflare (Cloudflare, Inc.,
+            101 Townsend St., San Francisco, CA 94107, USA) gehostet. Beim Aufruf werden
             durch Cloudflare technisch notwendige Daten (IP-Adresse, Zugriffszeit,
             aufgerufene URL, Browsertyp) in Server-Logs erfasst. Rechtsgrundlage ist
             Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einem sicheren und
@@ -40,15 +48,12 @@ import Layout from '../layouts/Layout.astro';
         </div>
 
         <div class="legal-section">
-          <h2>3. Schriftarten (Google Fonts)</h2>
+          <h2>3. Schriftarten</h2>
           <p>
-            Diese Website lädt Schriftarten von Google Fonts (Google Ireland Limited,
-            Gordon House, Barrow Street, Dublin 4, Irland). Beim Laden werden deine
-            IP-Adresse sowie technische Browserdaten an Google übertragen.
-            Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO. Du kannst die Übertragung
-            durch entsprechende Browser-Plugins oder das Blockieren von
-            <code>fonts.googleapis.com</code> unterbinden. Weitere Informationen:
-            <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Datenschutzerklärung</a>.
+            Die verwendete Schriftart <strong>Inter</strong> wird direkt von diesem Server
+            ausgeliefert. Es besteht <strong>keine Verbindung zu Google Fonts</strong> oder
+            einem anderen externen Font-Dienst. Beim Laden der Schrift werden also keine
+            Daten an Dritte übertragen.
           </p>
         </div>
 

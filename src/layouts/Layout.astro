@@ -1,25 +1,41 @@
 ---
-import ChatWidget from '../components/ChatWidget.astro';
+import '@fontsource/inter/latin-300.css';
+import '@fontsource/inter/latin-400.css';
+import '@fontsource/inter/latin-500.css';
+import '@fontsource/inter/latin-600.css';
+import '@fontsource/inter/latin-700.css';
+import '@fontsource/inter/latin-800.css';
+
+import { site } from '../data/site';
 
 interface Props {
   title?: string;
   description?: string;
+  /** Social-Media-Vorschaubild, relativ zu /public. Fällt auf das Standardbild zurück. */
+  image?: string;
+  /** Setzt og:type auf "article" – für Blog- und Altbau-Einträge. */
+  article?: boolean;
 }
 
 const {
-  title = 'Michael Apitz – IT-Leiter & Tech Insights',
-  description = 'IT-Strategie, Digitalisierung und Praxiswissen aus dem Alltag eines IT-Leiters.',
+  title = site.title,
+  description = site.description,
+  image = site.ogImage,
+  article = false,
 } = Astro.props;
 
 const navItems = [
   { href: '/', label: 'Home' },
   { href: '/citrix', label: 'Citrix' },
   { href: '/blog', label: 'Blog' },
+  { href: '/altbau', label: 'Altbau' },
   { href: '/projekte', label: 'Projekte' },
   { href: '/about', label: 'Über mich' },
 ];
 
 const currentPath = Astro.url.pathname;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const ogImage = new URL(image, Astro.site);
 ---
 <!doctype html>
 <html lang="de">
@@ -27,12 +43,29 @@ const currentPath = Astro.url.pathname;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     <meta name="description" content={description} />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="canonical" href={canonical} />
+
+    <meta property="og:type" content={article ? 'article' : 'website'} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={title} />
+    <meta property="og:site_name" content={site.name} />
+    <meta property="og:locale" content={site.locale} />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <link rel="sitemap" type="application/xml" href="/sitemap-index.xml" />
   </head>
   <body>
     <nav class="nav" id="nav">
@@ -64,8 +97,6 @@ const currentPath = Astro.url.pathname;
     <main>
       <slot />
     </main>
-
-    <ChatWidget />
 
     <footer class="footer">
       <div class="container">

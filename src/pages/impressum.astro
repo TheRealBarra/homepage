@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { site, impressumIstVollstaendig } from '../data/site';
 ---
 
 <Layout
@@ -9,36 +10,38 @@ import Layout from '../layouts/Layout.astro';
   <section class="legal-page section">
     <div class="container">
       <div class="legal-content">
-        <div class="legal-notice">
-          ⚠️ <strong>Muster-Impressum</strong> — Bitte alle mit <code>[…]</code> markierten Felder durch deine echten Angaben ersetzen.
-        </div>
+        {!impressumIstVollstaendig && (
+          <div class="legal-notice">
+            ⚠️ <strong>Noch nicht veröffentlichungsbereit</strong> — die E-Mail-Adresse in
+            <code>src/data/site.ts</code> ist noch ein Platzhalter. Sobald sie ersetzt ist,
+            verschwindet dieser Hinweis automatisch.
+          </div>
+        )}
 
         <h1 class="legal-title">Impressum</h1>
-        <p class="legal-subtitle">Angaben gemäß § 5 TMG</p>
+        <p class="legal-subtitle">Angaben gemäß § 5 DDG (freiwillig)</p>
+
+        <div class="legal-section">
+          <h2>Hinweis zur Impressumspflicht</h2>
+          <p>
+            Diese Website ist ein rein privates, nicht-gewerbliches Angebot. Es werden
+            keine Produkte oder Dienstleistungen beworben oder verkauft und keine
+            Gewinnerzielungsabsicht verfolgt. Eine Pflicht zur Angabe einer ladungsfähigen
+            Anschrift nach § 5 DDG (vormals § 5 TMG) besteht daher nicht. Die folgenden
+            Angaben erfolgen freiwillig, damit du mich erreichen kannst.
+          </p>
+        </div>
 
         <div class="legal-section">
           <h2>Verantwortlich für den Inhalt</h2>
           <p>
-            Michael Apitz<br />
-            [Straße und Hausnummer]<br />
-            [PLZ] [Ort]<br />
-            Deutschland
+            {site.name}<br />
+            E-Mail: <a href={`mailto:${site.email}`}>{site.email}</a>
           </p>
-        </div>
-
-        <div class="legal-section">
-          <h2>Kontakt</h2>
           <p>
-            E-Mail: <a href="mailto:[deine@email.de]">[deine@email.de]</a><br />
-            Telefon: [+49 ...]
-          </p>
-        </div>
-
-        <div class="legal-section">
-          <h2>Berufliche Angaben</h2>
-          <p>
-            Tätigkeit: IT-Leiter / IT-Consultant<br />
-            Arbeitgeber: [Unternehmen, Ort]
+            Tätigkeit: {site.occupation}. Die hier veröffentlichten Inhalte geben
+            ausschließlich meine persönliche Auffassung wieder und stehen in keinem
+            Zusammenhang mit meinem Arbeitgeber.
           </p>
         </div>
 
@@ -47,8 +50,7 @@ import Layout from '../layouts/Layout.astro';
           <p>
             Die Inhalte dieser Website wurden mit größtmöglicher Sorgfalt erstellt.
             Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann jedoch
-            keine Gewähr übernommen werden. Als Diensteanbieter bin ich gemäß § 7 Abs. 1 TMG
-            für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich.
+            keine Gewähr übernommen werden.
           </p>
         </div>
 
@@ -69,16 +71,6 @@ import Layout from '../layouts/Layout.astro';
             deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede
             Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen meiner
             schriftlichen Zustimmung.
-          </p>
-        </div>
-
-        <div class="legal-section">
-          <h2>Streitschlichtung</h2>
-          <p>
-            Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS)
-            bereit: <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener noreferrer">https://ec.europa.eu/consumers/odr/</a>.<br />
-            Ich bin nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer
-            Verbraucherschlichtungsstelle teilzunehmen.
           </p>
         </div>
       </div>
