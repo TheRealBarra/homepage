@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Icon from '../components/Icon.astro';
 import { getCollection } from 'astro:content';
+import { site } from '../data/site';
 
 const posts = (await getCollection('blog'))
   .filter(p => !p.data.draft)
@@ -139,7 +140,7 @@ const expertise = [
           Du möchtest dich zu IT-Strategie, Digitalisierung oder Tech-Leadership austauschen?
           Ich freue mich über Vernetzung und fachliche Diskussion.
         </p>
-        <a href="mailto:apitzmichael@web.de" class="btn btn-primary">Nachricht schreiben</a>
+        <a href={`mailto:${site.email}`} class="btn btn-primary">Nachricht schreiben</a>
       </div>
     </div>
   </section>

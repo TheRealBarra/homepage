@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Icon from '../components/Icon.astro';
 import { getCollection } from 'astro:content';
+import { site } from '../data/site';
 
 const citrixPosts = (await getCollection('blog'))
   .filter(p => !p.data.draft && p.data.tags?.some(t => t === 'Citrix'))
@@ -204,7 +205,7 @@ const highlights = [
           oder fragst dich, ob UniconOS das Richtige für deine Umgebung ist?
           Ich helfe gerne mit Praxiserfahrung.
         </p>
-        <a href="mailto:apitzmichael@web.de" class="btn btn-primary">Kontakt aufnehmen</a>
+        <a href={`mailto:${site.email}`} class="btn btn-primary">Kontakt aufnehmen</a>
       </div>
     </div>
   </section>
