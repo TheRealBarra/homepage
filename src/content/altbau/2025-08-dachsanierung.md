@@ -43,4 +43,4 @@ Das Gebäudeenergiegesetz hat klare Anforderungen an den U-Wert der Dachdämmung
 
 Dach ist dicht. Am 22. August war die Sanierung abgeschlossen.
 
-Dass ich wieder ruhig schlafen kann wenn's regnet – das ist schon mal was wert. Den Gaubenschaden im Innenbereich konnte ich übrigens erst danach richtig angehen – vorher hätte es keinen Sinn ergeben. Und während oben gearbeitet wurde, lief unten parallel schon die Schadstoffanalyse für die Schlacke im OG – dazu mehr im nächsten Eintrag.
+Dass ich wieder ruhig schlafen kann wenn's regnet – das ist schon mal was wert. Den Gaubenschaden im Innenbereich konnte ich übrigens erst danach richtig angehen – vorher hätte es keinen Sinn ergeben. Und während oben gearbeitet wurde, habe ich parallel schon Proben der Schlacke im OG genommen und zur Schadstoffanalyse ins Labor geschickt – dazu mehr im nächsten Eintrag.
