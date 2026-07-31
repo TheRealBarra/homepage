@@ -7,15 +7,17 @@
 // `note`   -> interne Planungsnotiz (z. B. "Bild-Platzhalter").
 //
 // Offene Erzählstränge / Blog-Ideen (noch ohne ausführlichen Eintrag):
-//  - Horror-Klo Hauptbad: Planung 27.08. -> Umsetzung 06.–09.09.
-//  - Küche: 11.08. Boden/Wände, 13.09. Hängeschränke, 26.01. Fliesenspiegel.
+//  - Küche: 11.08. Boden/Wände, 13.09. Hängeschränke, 26.01. Fliesenspiegel
+//    (Arbeitsplatten-Reparatur vom 02.09. ist im September-Rückblick erfasst).
 //  - Heizungs-Saga (Rohrbruch): 29.09. Ventilstifte -> 07.10. Heizung tot ->
 //    06.11. Wasserschaden durch Ventiltausch -> 15.12. Rohrtausch (Wohnzimmer
 //    aufgehackt). Eigenes Thema, getrennt von der Wärmepumpen-Frage (Juli 2026).
 //
-// Erledigt: Gaube-Strang (Dach 22.08.2025 -> Kinderzimmer fertig 18.07.2026) und
-// Neuer-Boden-OG-Strang (Statiker-Entscheidung 25.08.2025 -> Kinderzimmer fertig)
-// haben jetzt beide einen abschließenden Eintrag.
+// Erledigt: Gaube-Strang (Dach 22.08.2025 -> Gaube innen 08.09.2025 ->
+// Kinderzimmer fertig 18.07.2026), Neuer-Boden-OG-Strang (Statiker-Entscheidung
+// 25.08.2025 -> September-Rückblick -> Kinderzimmer fertig) und Horror-Klo
+// Hauptbad (Planung 27.08. -> Sanierung 04.-06.09., eigener Eintrag) haben
+// jetzt jeweils einen abschließenden Eintrag.
 
 export type TimelineCategory =
   | 'meilenstein'
@@ -66,17 +68,21 @@ export const milestones: Milestone[] = [
   { date: '2025-08-18', endDate: '2025-08-19', title: 'Schlacke entsorgt (Schleuse, 6.500 € / ~40 m²)', category: 'schadstoff', entry: '2025-08-schlacke-raus' },
   { date: '2025-08-25', title: 'Statiker gibt Bodenaufbau OG frei: Holzkonstruktion statt Estrich', category: 'boden', entry: '2025-08-bodenaufbau-og-entscheidung' },
   { date: '2025-08-27', title: 'Planung der Beseitigung des „Horror-Klos“ im Hauptbad', category: 'bad' },
-  { date: '2025-08-29', title: 'Erster Bodenaufbau im Flur OG', category: 'boden', note: 'Bild-Platzhalter' },
-  { date: '2025-09-06', title: 'Bodenaufbau Arbeitszimmer', category: 'boden' },
-  { date: '2025-09-06', endDate: '2025-09-09', title: 'Renovierung des Hauptbad-Klos', category: 'bad' },
-  { date: '2025-09-08', title: 'Alte nasse Gaube innen raus, Trocknungsgerät rein', category: 'dach' },
+  { date: '2025-08-29', endDate: '2025-08-30', title: 'Erster Bodenaufbau im Flur OG, Lampe montiert', category: 'boden', entry: '2025-09-weiteres', note: 'Bild-Platzhalter' },
+  { date: '2025-08-31', title: 'Kellerwaschbecken: Abfluss verlängert gegen Rückstau beim Abpumpen', category: 'allgemein', entry: '2025-09-weiteres' },
+  { date: '2025-09-02', title: 'Küche EG: Arbeitsplatte am Waschbecken verstärkt (Sollbruchstelle zu schwach)', category: 'kueche', entry: '2025-09-weiteres' },
+  { date: '2025-09-04', title: 'Rohrbruch beim Ausbau des verrosteten Grohe-Gestells im Bad OG', category: 'bad', entry: '2025-09-hauptbad-klo' },
+  { date: '2025-09-05', endDate: '2025-09-06', title: 'Bad-Toilette OG saniert: neuer Geberit-Stand, neue Fliesen', category: 'bad', entry: '2025-09-hauptbad-klo' },
+  { date: '2025-09-06', endDate: '2025-09-07', title: 'Bodenaufbau Arbeitszimmer', category: 'boden', entry: '2025-09-weiteres' },
+  { date: '2025-09-08', title: 'Gaube im Kinderzimmer freigelegt (alte Krautplatte raus), Wandbereich dort und in der Schlafzimmer-Ecke geöffnet, Trocknungsgerät rein', category: 'dach', entry: '2025-09-gaube-innen' },
   { date: '2025-09-13', title: 'Hängeschränke in der Küche montiert', category: 'kueche' },
-  { date: '2025-09-15', title: 'Clickvinyl im Flur OG', category: 'boden' },
-  { date: '2025-09-20', title: 'Clickvinyl im Arbeitszimmer OG', category: 'boden' },
+  { date: '2025-09-15', title: 'Clickvinyl im Flur OG', category: 'boden', entry: '2025-09-weiteres' },
+  { date: '2025-09-20', title: 'Clickvinyl im Arbeitszimmer OG', category: 'boden', entry: '2025-09-weiteres' },
   { date: '2025-09-22', dateLabel: 'September 2025', title: 'Gäste-WC: alte Fliesen mit Fliesenfarbe überstrichen', category: 'bad' },
-  { date: '2025-09-26', title: 'Bodenaufbau Schlafzimmer OG', category: 'boden' },
+  { date: '2025-09-26', endDate: '2025-09-27', title: 'Bodenaufbau Schlafzimmer OG', category: 'boden', entry: '2025-09-weiteres' },
   { date: '2025-09-29', title: 'Es wird kalt – Heizventilstifte fahren nicht raus', category: 'heizung' },
-  { date: '2025-10-02', title: 'Clickvinyl im Schlafzimmer OG & Hundegarderobe gebaut', category: 'boden' },
+  { date: '2025-10-02', title: 'Hundegarderobe gebaut', category: 'allgemein' },
+  { date: '2025-10-02', endDate: '2025-10-15', title: 'Clickvinyl im Schlafzimmer OG', category: 'boden', entry: '2025-09-weiteres' },
   { date: '2025-10-04', title: 'Treppen-Rutschmatten abgerissen, Kleber gelöst', category: 'allgemein' },
   { date: '2025-10-05', dateLabel: 'Oktober 2025', title: 'Gäste-WC: neue Lampe', category: 'bad' },
   { date: '2025-10-07', title: 'Es wird kälter – die Heizung springt nicht an', category: 'heizung' },

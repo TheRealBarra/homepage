@@ -8,6 +8,10 @@ tags: ["Kinderzimmer", "Boden", "Gaube", "2026"]
 
 Das war ein langer Weg – und ausgerechnet in dem Zimmer, das schon einmal für Ärger gesorgt hat: Es ist dieselbe Gaube, die [beim Dachschaden](/altbau/2025-08-dachsanierung) vollflächig durchfeuchtet war. Vom Wasserschaden zum fertigen Kinderzimmer, quasi.
 
+## Erst trocknen, dann bauen
+
+Bevor überhaupt an einen neuen Boden zu denken war, musste erst die Wand ran: Am 8. September wurde [die alte, durchnässte Krautplatte an der Gaubeninnenseite rausgerissen](/altbau/2025-09-gaube-innen), der Wandbereich freigelegt und ein Trocknungsgerät reingestellt. Erst danach ergab der nächste Schritt überhaupt Sinn.
+
 ## Der Bodenaufbau im Januar
 
 Der Bodenaufbau selbst – Konstruktionsholz, OSB, Kokosdämmstreifen, Steinwolle, [so wie ihn der Statiker empfohlen hatte](/altbau/2025-08-bodenaufbau-og-entscheidung) – stand schon im Januar. Dabei haben wir gleich noch eine kleine Ecke aus Styrodurplatten mit eingebaut, um ein altes Rohr zu verkleiden, das sonst frei im Raum gestanden hätte.

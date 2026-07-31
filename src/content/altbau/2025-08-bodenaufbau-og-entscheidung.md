@@ -23,7 +23,7 @@ Wir haben uns für die Holzkonstruktion entschieden: leichter, deutlich günstig
 
 ## Was das für die Zimmer bedeutet
 
-Ab Ende August wurde reihum aufgebaut, Raum für Raum: erst der Flur, dann Arbeitszimmer und Schlafzimmer, zuletzt im Januar das Kinderzimmer – überall derselbe Aufbau, dieselbe Statik-Vorgabe im Hinterkopf.
+Ab dem 29. August wurde reihum aufgebaut: der Flur am 29./30. August, das Arbeitszimmer am 6./7. September, das Schlafzimmer am 26./27. September, zuletzt im Januar das Kinderzimmer – überall derselbe Aufbau, dieselbe Statik-Vorgabe im Hinterkopf. Parallel dazu lief Ende August und in den ersten Septemberwochen einiges andere: die Sanierung des Hauptbad-Klos, die Gaube im Kinderzimmer wurde freigelegt, und auch unten in Küche und Keller gab's zu tun.
 
 ---
 
