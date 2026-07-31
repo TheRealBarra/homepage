@@ -8,7 +8,7 @@ tags: ["Dach", "Dachsanierung", "Gaube", "GEG", "2025"]
 
 Gut fünf Wochen nach der Übergabe – und das Dach ist schon dran. Keine Überraschung an sich, ein Haus von 1956 mit dem Original-Dach hat seine besten Tage hinter sich. Und für GEG-Konformität (Gebäudeenergiegesetz) hätte eine Dachsanierung ohnehin kommen müssen.
 
-Was mich überrascht hat: Dass die Gaube im Kinderzimmer im Obergeschoss undicht war. So richtig undicht. Das war beim Kauf nicht erkennbar – und spätestens nach dem ersten ausgiebigen Regen nach Einzug dann schon.
+Was mich überrascht hat: dass die Gaube im Kinderzimmer im Obergeschoss undicht war. So richtig undicht. Das war beim Kauf nicht erkennbar – und spätestens nach dem ersten ausgiebigen Regen nach der Übergabe dann schon.
 
 ## Der Fund
 
@@ -43,4 +43,6 @@ Das Gebäudeenergiegesetz hat klare Anforderungen an den U-Wert der Dachdämmung
 
 Dach ist dicht. Am 22. August war die Sanierung abgeschlossen.
 
-Dass ich wieder ruhig schlafen kann wenn's regnet – das ist schon mal was wert. Den Gaubenschaden im Innenbereich konnte ich übrigens erst danach richtig angehen – vorher hätte es keinen Sinn ergeben. Und während oben gearbeitet wurde, habe ich parallel schon Proben der Schlacke im OG genommen und zur Schadstoffanalyse ins Labor geschickt – dazu mehr im nächsten Eintrag.
+Dass ich wieder ruhig schlafen kann, wenn's regnet – das ist schon mal was wert. Den Schaden im Innenbereich konnte ich erst danach angehen; vorher hätte es keinen Sinn ergeben, eine Wand zu öffnen, in die weiter Wasser läuft. Aufgemacht wurde die Gaubeninnenseite dann am [8. September](/altbau/2025-09-boeden-bad-gaube), fertig war das Kinderzimmer erst [im Juli 2026](/altbau/2026-07-kinderzimmer-fertig). Von der Ursache bis zum fertigen Raum lagen also fast elf Monate.
+
+Und während oben gearbeitet wurde, habe ich parallel Proben der Schlacke im Obergeschoss genommen und zur Schadstoffanalyse ins Labor geschickt – [dazu mehr im nächsten Eintrag](/altbau/2025-08-schlacke-raus).
