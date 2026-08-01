@@ -1,7 +1,7 @@
 ---
 title: "Der teuerste Agent für die simpelste Aufgabe"
 description: "Seit dem 1. Juni 2026 rechnet GitHub Copilot pro Token zu API-Listenpreisen ab. Damit ist jede Ineffizienz im Workflow zum ersten Mal direkt auf der Rechnung sichtbar – und die Ende August auslaufende Übergangsfrist zeigt, wie viel vorher subventioniert wurde."
-pubDate: 2026-08-01
+pubDate: 2026-07-27
 tags: ["KI", "Kosten", "GitHub Copilot", "Automatisierung", "Architektur", "Betrieb"]
 draft: false
 ---
@@ -14,7 +14,7 @@ Und hier wird es interessant. Das monatliche Credit-Kontingent entspricht **exak
 
 Wie groß diese Subvention war, verrät GitHub selbst über die Übergangsregelung: Für Juni, Juli und August 2026 gibt es erhöhte Kontingente – Business bekommt 30 $ statt 19 $, Enterprise 70 $ statt 39 $. Danach fällt beides auf Parität zurück.
 
-**Diese Promo läuft Ende dieses Monats aus.** Wer im August mit seinem Kontingent gerade so hinkommt, hat im September rund 40 Prozent weniger zur Verfügung. Das ist der eigentliche Termin, auf den man schauen sollte.
+**Diese Promo läuft Ende August aus.** Wer im August mit seinem Kontingent gerade so hinkommt, hat im September rund 40 Prozent weniger zur Verfügung. Das ist der eigentliche Termin, auf den man schauen sollte.
 
 Die Berichte aus den ersten Wochen waren entsprechend: Nutzer, die 60 Prozent ihres Monatsbudgets in zwei Stunden verbraucht haben. Ein Fünftel des Kontingents für die Analyse einer einzelnen Datei – ohne eine Zeile Code zu ändern. Geteilte Team-Pools, die abrupt leer waren, weil einer eine rechenintensive Abfrage gestartet hat.
 
@@ -130,7 +130,7 @@ Die gute Nachricht: In den meisten Setups liegen die Faktoren offen herum. Ein M
 
 Zusammengenommen ist das selten eine Einsparung von zehn oder zwanzig Prozent. Es ist meistens ein Faktor.
 
-Wer das im September nicht als Überraschung erleben will, hat dafür noch genau diesen Monat. Man muss halt einmal nachrechnen. Das ist der unangenehme Teil – nicht das Ergebnis.
+Wer das im September nicht als Überraschung erleben will, hat dafür noch bis Ende August. Man muss halt einmal nachrechnen. Das ist der unangenehme Teil – nicht das Ergebnis.
 
 ---
 

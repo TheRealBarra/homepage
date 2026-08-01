@@ -1,7 +1,7 @@
 ---
 title: "Warum lokale LLMs nicht immer die Antwort sind"
 description: "Lokale Modelle sind für vieles die richtige Wahl – aber sobald mehrere Agenten parallel arbeiten, läuft man in eine harte physikalische Grenze. Eine Rechnung, die man einmal gemacht haben sollte, bevor man alles auf die eigene Hardware plant."
-pubDate: 2026-08-01
+pubDate: 2026-07-21
 tags: ["KI", "LLM", "Ollama", "Infrastruktur", "Betrieb", "Kosten"]
 draft: false
 ---

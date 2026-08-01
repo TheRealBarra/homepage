@@ -1,7 +1,7 @@
 ---
 title: "Patchen oder nicht patchen – die Gretchenfrage im Enterprise-Betrieb"
 description: "CVEs wollen gepatcht werden. Kompatibilitätsmatrizen sagen etwas anderes. Und irgendwo dazwischen sitzt man und liest zum dritten Mal denselben Known-Issues-Artikel."
-pubDate: 2026-06-23
+pubDate: 2026-06-17
 tags: ["Betrieb", "Citrix", "Sicherheit", "Virtualisierung", "Praxis"]
 draft: false
 ---
