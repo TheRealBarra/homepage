@@ -22,3 +22,8 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# Rohmaterial vom Foto-Upload-Helfer (scripts/photo-upload-server.mjs) -
+# bewusst NICHT versioniert, um das Repo nicht mit ungesichteten Handyfotos
+# aufzublaehen. Kuratierte Auswahl geht manuell nach public/altbau/.
+Hausprojekt/uploads/

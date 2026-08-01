@@ -20,17 +20,29 @@ Oben drauf kam dann der eigentliche Bodenbelag: Clickvinyl im Flur am 15. Septem
 
 Seit der Übergabe am 26. Juni war das WC im Bad im Obergeschoss praktisch unbenutzbar: Das Wasser lief nach dem Spülen einfach nicht richtig durch. Der Grund fand sich erst beim genaueren Hinsehen – das alte Grohe-Vorwandelement war innen komplett verrostet. Zu Recht „Horror-Klo".
 
+![Das alte Grohe-Vorwandelement im Bad OG, innen komplett verrostet](/altbau/altes-grohe-vorwandelement.jpg)
+
 Erträglich war das nur, weil im Erdgeschoss [seit dem 8. August](/altbau/2025-08-bodenaufbau-og-entscheidung) ein neues WC im Gäste-WC hing. Sonst wäre das Thema deutlich früher eskaliert.
 
-Ende August war klar: Das Spülkasten-Element muss komplett raus. Am 4. September, mitten im Ausbau des verrosteten Gestells, dann die nächste Überraschung: Beim Lösen brach eine der Leitungen. Aus dem geplanten Austausch wurde eine Reparatur unter Zeitdruck.
+Ende August war klar: Das Spülkasten-Element muss komplett raus. Am 4. September, mitten im Ausbau des verrosteten Gestells, dann die nächste Überraschung: Beim Lösen brach eine der Leitungen. Ein Loch im Rohr – das defekte Stück musste rausgeflext und ersetzt werden. Aus dem geplanten Austausch wurde eine Reparatur unter Zeitdruck.
+
+![Das defekte, herausgeflexte Rohrstück mit dem Loch, das den Rohrbruch verursacht hat](/altbau/rohrbruch-defektes-stueck.jpg)
 
 Am 5. und 6. September kam dann alles auf einmal: ein neues Geberit-Vorwandelement, dazu frische Fliesen. Zwei Tage, und aus dem WC, das seit der Übergabe faktisch außer Betrieb war, wurde wieder ein funktionierendes Bad.
+
+![Neues Geberit-Vorwandelement im Bad OG während des Einbaus](/altbau/geberit-vorwandelement-neu.jpg)
+
+![Das fertige Bad im Obergeschoss nach Fliesen und Montage](/altbau/bad-og-fertig.jpg)
 
 ## Die Gaube von innen: Kinderzimmer und Schlafzimmer geöffnet
 
 Außen war die Gaube [seit dem 22. August dicht](/altbau/2025-08-dachsanierung) – aber innen sah man dem durchfeuchteten Wandbereich noch genau an, was da passiert war. Vorher hätte es keinen Sinn ergeben, daran etwas zu ändern; jetzt schon.
 
 Am 8. September ging es an die Innenseite der Gaube im Kinderzimmer: die alte, durchnässte Krautplatte raus, der betroffene Wandbereich freigelegt, ein Trocknungsgerät rein. Beim Freilegen zeigte sich, dass nicht nur das Kinderzimmer betroffen war – die angrenzende Ecke im Schlafzimmer, direkt neben der Gaube, hatte denselben Schaden über die Wand mitbekommen.
+
+![Trocknungsgerät im geöffneten Wandbereich der Gaube im Kinderzimmer](/altbau/gaube-trocknungsgeraet.jpg)
+
+![Die angrenzende Schlafzimmer-Ecke neben der Gaube, ebenfalls geöffnet und beschädigt](/altbau/schlafzimmer-ecke-schaden.jpg)
 
 Ab da war klar: Im Kinderzimmer passiert erst mal nichts mehr. Nasse Wände brauchen Zeit, und man baut keinen Boden in einen Raum, der noch trocknet. Deshalb ist das Kinderzimmer am Ende auch der einzige Raum im Obergeschoss geblieben, der 2025 nicht fertig wurde.
 

@@ -36,7 +36,7 @@
    ans Ende in einen ausgewiesenen Block:
    `**Nachtrag (Stand Monat Jahr):** …`
    Damit muss man beim Ergänzen nie einen bestehenden Absatz umschreiben.
-5. **Nichts erfinden.** Was nicht belegt ist, kommt in Abschnitt 6/7 als offene
+5. **Nichts erfinden.** Was nicht belegt ist, kommt in Abschnitt 7/8 als offene
    Frage – nicht als Prosa in den Blog.
 6. **Raumnamen sind fest** (Abschnitt 3). „Hauptbad", „Bad oben", „Klo" nicht
    gemischt verwenden. „Bad im EG" = Gäste-WC EG, es gibt nur das eine Bad im
@@ -160,7 +160,51 @@ Wenn eine Zahl in einem Text auftaucht, kommt sie von hier.
 
 ---
 
-## 6. Offene Widersprüche – Entscheidung nötig
+## 6. Fotoregister
+
+Herkunft: Upload-Helfer (`scripts/photo-upload-server.mjs`), Rohdaten in
+`Hausprojekt/uploads/<eintrag>/` (gitignored), Auswahl komprimiert und
+umbenannt nach `public/altbau/` via `scripts/publish-photos.mjs`. Neue Fotos
+für einen bestehenden Eintrag: Job in `publish-photos.mjs` ergänzen, Skript
+laufen lassen, `![...](/altbau/<name>.jpg)` an der passenden Stelle im
+Markdown einfügen, Zeile hier ergänzen.
+
+| Datei | Eintrag | Zeigt |
+|---|---|---|
+| `alte-dielen-klebrig.jpg` | `2025-08-schlacke-raus` | alte lackierte Dielen unter dem Teppich (vor 01.08.2026 verwaist, da beim Verschieben des Schlacke-Strangs von Juli nach August mitgewandert) |
+| `schlackefund-1.jpg` | `2025-08-schlacke-raus` | Schlackefund unter den Dielen (dito) |
+| `schlackefund-2.jpg` | `2025-08-schlacke-raus` | Schlackeschicht, Nahaufnahme (dito) |
+| `altes-grohe-vorwandelement.jpg` | `2025-09-boeden-bad-gaube` | altes Vorwandelement, innen verrostet |
+| `geberit-vorwandelement-neu.jpg` | `2025-09-boeden-bad-gaube` | neues Geberit-Element, Rohbau |
+| `bad-og-fertig.jpg` | `2025-09-boeden-bad-gaube` | Bad OG fertig gefliest |
+| `gaube-trocknungsgeraet.jpg` | `2025-09-boeden-bad-gaube` | Trocknungsgerät, geöffnete Gaubenwand |
+| `schlafzimmer-ecke-schaden.jpg` | `2025-09-boeden-bad-gaube` | Schlafzimmer-Ecke, Schaden freigelegt |
+| `rohrbruch-defektes-stueck.jpg` | `2025-09-boeden-bad-gaube` | herausgeflextes Rohrstück mit dem Loch, Ursache Rohrbruch 04.09. |
+| `ventiltausch-nahaufnahme.jpg` | `2025-12-heizungs-saga` | Ventil in geöffneter Wand |
+| `wasserschaden-decke-entdeckt.jpg` | `2025-12-heizungs-saga` | Deckenfleck, Schaden entdeckt |
+| `flurheizung-neue-rohre.jpg` | `2025-12-heizungs-saga` | neu verlegte Zu-/Ablaufrohre |
+| `wohnzimmer-neu-verputzt.jpg` | `2025-12-heizungs-saga` | Wohnzimmer nach dem Verputzen |
+| `kinderzimmer-bodenaufbau-januar.jpg` | `2026-01-rueckblick` | Bodenaufbau, Dämmung sichtbar |
+| `schlafzimmer-fertig.jpg` | `2026-01-rueckblick` | fertig eingerichtetes Schlafzimmer |
+| `kuechentuer-vorher.jpg` | `2026-02-rueckblick` | Küchentür vor dem Streichen |
+| `kuechentuer-streichen.jpg` | `2026-02-rueckblick` | Küchentür beim Streichen |
+| `kuechentuer-montiert.jpg` | `2026-02-rueckblick` | fertige Küchentür, schwarze Klinke |
+| `kinderzimmer-clickvinyl-test.jpg` | `2026-02-rueckblick` | probeweise verlegtes Clickvinyl |
+| `terrasse-kaercher-vorher-nachher.jpg` | `2026-02-rueckblick` | Terrassenplatten, Kärcher-Kontrast |
+| `haengelampe-esszimmer.jpg` | `2026-03-rueckblick` | neue Hängelampe über dem Esstisch |
+| `garten-ausgehobenes-beet-hund.jpg` | `2026-03-rueckblick` | ausgehobenes Kirschlorbeer-Loch |
+| `garten-werkzeug-heckenschnitt.jpg` | `2026-03-rueckblick` | Werkzeug am Beetrand |
+| `graben-kabel-verlegt.jpg` | `2026-04-rueckblick` | Kabelgraben mit Warnband |
+| `graben-hausanschluss.jpg` | `2026-04-rueckblick` | Graben am Hausanschluss |
+| `neues-beet-strauchpflanzung.jpg` | `2026-04-rueckblick` | neues Beet, frische Pflanzung |
+| `beet-weg-hund.jpg` | `2026-04-rueckblick` | Weg entlang des neuen Beets |
+| `kirschbaum-gepflanzt.jpg` | `2026-04-rueckblick` | Kirschbaum, am Pfahl verankert |
+| `kirschbaum-verankerung.jpg` | `2026-04-rueckblick` | Nahaufnahme Jute-Verankerung |
+| `kinderzimmer-fertig.jpg` | `2026-07-kinderzimmer-fertig` | fertiges Kinderzimmer |
+
+---
+
+## 7. Offene Widersprüche – Entscheidung nötig
 
 Diese Punkte stehen aktuell so im Blog, wie in der Tabelle „aktuell" vermerkt.
 Solange sie nicht geklärt sind, bleiben sie so.
@@ -181,7 +225,7 @@ Koksschüttung (bewusst offene Synonymie, kein Zielkonflikt mehr).
 
 ---
 
-## 7. Lücken – hier fehlt Kontext
+## 8. Lücken – hier fehlt Kontext
 
 Stichpunkte reichen, ich formuliere aus. Sortiert nach Wirkung auf den Blog.
 
@@ -210,10 +254,15 @@ Stichpunkte reichen, ich formuliere aus. Sortiert nach Wirkung auf den Blog.
 ### Niedrig – eigene Geschichten, die noch keine sind
 
 - **L8 · Dachboden.** Beim Kauf als Ausbaupotenzial genannt. Aktueller Plan?
-- **L9 · Fotos.** Nur 6 Bilder sind eingebunden (`public/altbau/`), unter
-  `Hausprojekt/` liegen rund 60 unbenutzte Aufnahmen und 2 Videos. Für die
-  Einträge ab September gibt es aktuell null Bilder – obwohl seit dem
-  31.07.2026 für jedes neu genannte Datum mindestens ein Foto existiert.
+- **L9 · Fotos, Rest.** Seit 01.08.2026 sind 27 kuratierte Fotos in sieben
+  Einträgen eingebunden (September 2025 bis Juli 2026, siehe Fotoregister
+  unten) – die Einträge davor (Hauskauf bis Dachsanierung/Schlacke/Statik,
+  Juni–August 2025) haben weiterhin nur die ursprünglichen 6 Bilder. Unter
+  `Hausprojekt/` liegen noch ungesichtete Aufnahmen aus dieser Zeit sowie
+  2 Videos. Zwei Einzelstellen fehlen selbst in den frisch bebilderten
+  Monaten: der Terrassensockel (10.04., nur am Rand zweier Weitwinkelfotos
+  sichtbar, keine Nahaufnahme) und der Flur-EG-Zustand vor dem Clickvinyl
+  (16.04., siehe L7 – dafür existiert gar kein Foto).
 - **L10 · Rohrtausch-Kosten Heizungs-Saga.** War es eine reine Versicherungssache
   (Elementarschaden) oder gab es einen Eigenanteil? Wie lange war die Heizung
   zwischen 07.10. und 15.12. tatsächlich beeinträchtigt?
@@ -230,7 +279,7 @@ heute mindestens einen Eintrag).
 
 ---
 
-## 8. Wenn du etwas änderst
+## 9. Wenn du etwas änderst
 
 - **Neuer Termin:** in `timeline.ts` einsortieren → Abschnitt im passenden
   Monatseintrag ergänzen → Raum-Register hier aktualisieren.
@@ -238,7 +287,7 @@ heute mindestens einen Eintrag).
   `src/content/altbau/` prüfen, wo der Wert sonst noch steht.
 - **Neue Erkenntnis zu einem alten Eintrag:** nicht den Fließtext umschreiben,
   sondern unten `**Nachtrag (Stand …):**` anhängen.
-- **Lücke geschlossen:** Punkt in Abschnitt 6/7 streichen, damit die Liste
+- **Lücke geschlossen:** Punkt in Abschnitt 7/8 streichen, damit die Liste
   ehrlich bleibt.
 
 > Fotos: Rohmaterial unter `Hausprojekt/` (IMG-/UUID-Dateien), veröffentlicht

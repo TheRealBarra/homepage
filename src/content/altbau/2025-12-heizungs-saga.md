@@ -20,15 +20,23 @@ Es wurde kälter, und die Heizung sprang gar nicht mehr an. Damit war klar, dass
 
 Eine Sanitärfirma kam und tauschte die Ventile. Danach lief die Heizung wieder. Was zu diesem Zeitpunkt niemand wusste: Vermutlich ist bei diesem Termin ein Rohr in der Flurheizung beschädigt worden – bemerkt hat das aber erst vier Wochen später jemand, Anfang Dezember, als der Schaden schon sichtbar war.
 
+![Nahaufnahme des getauschten Heizungsventils in der geöffneten Wand](/altbau/ventiltausch-nahaufnahme.jpg)
+
 ## Anfang Dezember: der Schaden wird entdeckt
 
 Vier Wochen, in denen unbemerkt Wasser in den Aufbau gelaufen ist. Das war groß genug, um daraus einen **Elementarschaden** zu machen – kein einfacher Reparaturfall mehr, sondern ein Versicherungsfall.
+
+![Sichtbarer Wasserschaden an der Decke, an dem der Rohrschaden entdeckt wurde](/altbau/wasserschaden-decke-entdeckt.jpg)
 
 ## 15. Dezember: Rohrtausch, und das Wohnzimmer geht auf
 
 Die Konsequenz: Zu- und Ablaufrohre der Flurheizung wurden komplett neu verlegt, bis hinunter in den Keller. Weil die Leitungen durchs angrenzende Wohnzimmer führen, musste dieser Raum mit aufgehackt werden – ein Raum, in dem im Juli schon einmal [der alte Holzboden und der Putz rausgeflogen waren](/altbau/2025-07-rueckblick), war damit zum zweiten Mal Baustelle.
 
+![Die neu verlegten Zu- und Ablaufrohre der Flurheizung in der geöffneten Wand](/altbau/flurheizung-neue-rohre.jpg)
+
 Neu verputzt wurde nur einen Tag später, am 16. Dezember. Danach ging das Wohnzimmer wieder in den normalen Gebrauch über.
+
+![Das Wohnzimmer nach dem Rohrtausch neu verputzt](/altbau/wohnzimmer-neu-verputzt.jpg)
 
 ## Was ich daraus mitnehme
 

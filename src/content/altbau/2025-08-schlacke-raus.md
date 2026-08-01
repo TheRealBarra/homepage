@@ -6,7 +6,15 @@ status: abgeschlossen
 tags: ["Schlacke", "Schadstoffe", "Statik", "Entsorgung", "Boden", "2025"]
 ---
 
-Im [Juli waren im Obergeschoss schon Teppich und die alten, lackierten Dielen raus](/altbau/2025-07-rueckblick). Am **1. August** stand dann fest, womit ich es unter den Dielen wirklich zu tun hatte: einer Schüttung, umgangssprachlich Schlacke genannt. Ob das im technischen Sinn tatsächlich Schlacke oder eher eine Koksschüttung ist, kann ich bis heute nicht sicher sagen – für die weitere Geschichte macht das keinen Unterschied, behandelt wurde es so oder so als schadstoffverdächtiges Material.
+Im [Juli waren im Obergeschoss schon Teppich und die alten, lackierten Dielen raus](/altbau/2025-07-rueckblick).
+
+![Alte lackierte Dielen unter dem Teppich – klebrig, nicht mehr zu retten](/altbau/alte-dielen-klebrig.jpg)
+
+Am **1. August** stand dann fest, womit ich es unter den Dielen wirklich zu tun hatte: einer Schüttung, umgangssprachlich Schlacke genannt. Ob das im technischen Sinn tatsächlich Schlacke oder eher eine Koksschüttung ist, kann ich bis heute nicht sicher sagen – für die weitere Geschichte macht das keinen Unterschied, behandelt wurde es so oder so als schadstoffverdächtiges Material.
+
+![Schlackefund unter den Dielen – Schadstoffgutachten war Pflicht](/altbau/schlackefund-1.jpg)
+
+![Schlackeschicht unter den Dielen – Nahaufnahme](/altbau/schlackefund-2.jpg)
 
 Während die Dachfirma vom 4. bis 22. August oben das Dach neu eindeckte, lief im Haus die Vorarbeit für den neuen Boden im Obergeschoss. Den Gaubenschaden im Innenbereich konnte ich ohnehin erst nach den Dacharbeiten richtig angehen – also habe ich die Zeit genutzt, um die Schlacke anzugehen, solange ich sowieso mitten in der Bauphase steckte.
 

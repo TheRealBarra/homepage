@@ -12,9 +12,15 @@ Der März war vor allem ein Gartenmonat – mit einer Unterbrechung, die ein eig
 
 Der [Kirschlorbeer-Rückbau, der im November begonnen hatte](/altbau/2025-12-heizungs-saga), ging im März weiter: Am 2. und am 8. März wurde jeweils ein weiterer Strauch ausgegraben. Am 15. März kam die linke Seite des Gartens dran – hier wurde nicht ausgegraben, sondern nur gekürzt.
 
+![Ein frisch ausgehobenes Pflanzloch im Garten nach dem Ausgraben eines Kirschlorbeers](/altbau/garten-ausgehobenes-beet-hund.jpg)
+
+![Werkzeug für den Heckenschnitt im Gras, neben einem frisch bearbeiteten Beetrand](/altbau/garten-werkzeug-heckenschnitt.jpg)
+
 ## Die Hängelampe im Esszimmer
 
 Am 13. März, fast acht Monate nach dem [ersten fertigen Boden im Esszimmer](/altbau/2025-07-rueckblick), kam noch die Deckenbeleuchtung dazu: eine neue Hängelampe. Kleiner Punkt, aber einer, der lange auf der Liste stand.
+
+![Die neue dreiflammige Hängelampe über dem Esstisch](/altbau/haengelampe-esszimmer.jpg)
 
 ## Und dann die Wasserleitung
 

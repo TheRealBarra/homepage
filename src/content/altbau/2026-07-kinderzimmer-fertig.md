@@ -38,6 +38,8 @@ Nach elf Monaten Gaubengeschichte war das der Moment, in dem man kurz überlegt,
 
 Mitte Juli war es dann so weit: gestrichen und eingerichtet. Gitterbett, Fuchs-Teppich, Wickelkommode. Der schrägen Gaubenwand sieht man nicht mehr an, was da mal für ein Schaden drinsteckte.
 
+![Das fertig eingerichtete Kinderzimmer mit Gitterbett und Schrank unter der sanierten Gaubenwand](/altbau/kinderzimmer-fertig.jpg)
+
 Damit ist das Obergeschoss komplett: Flur, Arbeitszimmer, Schlafzimmer, Kinderzimmer – alle vier mit demselben Bodenaufbau, alle vier fertig.
 
 ---

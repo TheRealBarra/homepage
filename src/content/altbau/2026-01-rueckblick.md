@@ -12,11 +12,15 @@ Der Januar war der Monat, in dem sich zwei lange Stränge geschlossen haben – 
 
 Seit dem 8. September stand im Kinderzimmer ein Trocknungsgerät, weil [die Gaubenwand durchnässt war](/altbau/2025-09-boeden-bad-gaube). Vier Monate später war der Raum so weit, dass man ihn zumachen konnte. Der Bodenaufbau kam so rein wie in den anderen drei Räumen auch – Konstruktionsholz, Hanfdämmstreifen, Steinwolle, obenauf die OSB-Platten montiert, [nach der Vorgabe des Statikers](/altbau/2025-08-bodenaufbau-og-entscheidung).
 
+![Bodenaufbau im Kinderzimmer im Januar, Dämmung zwischen den Balken, OSB-Platten teils verlegt](/altbau/kinderzimmer-bodenaufbau-januar.jpg)
+
 Damit hatten alle vier Räume im Obergeschoss denselben Aufbau. Was danach im Kinderzimmer noch passiert ist, steht im [Eintrag zum fertigen Zimmer](/altbau/2026-07-kinderzimmer-fertig) – kurz gesagt: Es hat noch mal ein halbes Jahr gedauert.
 
 ## 5. Januar: das Schlafzimmer ist fertig
 
 Zwei Tage später der erste Raum, bei dem wirklich nichts mehr offen war: Bodenaufbau (September), Clickvinyl (Oktober), [Kleiderschrank](/altbau/2025-10-rueckblick) (Oktober) – und jetzt fertig eingerichtet und dekoriert.
+
+![Das fertig eingerichtete und dekorierte Schlafzimmer](/altbau/schlafzimmer-fertig.jpg)
 
 Von der Übergabe bis zum ersten komplett fertigen Raum: gut sechs Monate.
 
